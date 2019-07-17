@@ -1,10 +1,10 @@
 package straywolfe.cookingwithtfc.common.item;
 
-import com.bioxx.tfc.Reference;
-import com.bioxx.tfc.Core.TFC_Core;
-import com.bioxx.tfc.Render.Item.FoodItemRenderer;
-import com.bioxx.tfc.api.Food;
-import com.bioxx.tfc.api.Enums.EnumFoodGroup;
+import com.dunk.tfc.Reference;
+import com.dunk.tfc.Core.TFC_Core;
+import com.dunk.tfc.Render.Item.FoodItemRenderer;
+import com.dunk.tfc.api.Food;
+import com.dunk.tfc.api.Enums.EnumFoodGroup;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IIconRegister;

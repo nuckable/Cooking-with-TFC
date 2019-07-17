@@ -1,6 +1,6 @@
 package straywolfe.cookingwithtfc.common.tileentity;
 
-import com.bioxx.tfc.TileEntities.NetworkTileEntity;
+import com.dunk.tfc.TileEntities.NetworkTileEntity;
 
 import net.minecraft.nbt.NBTTagCompound;
 

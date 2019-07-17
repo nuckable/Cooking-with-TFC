@@ -1,8 +1,8 @@
 package straywolfe.cookingwithtfc.client.nei;
 
-import com.bioxx.tfc.GUI.GuiHealth;
-import com.bioxx.tfc.GUI.GuiInventoryTFC;
-import com.bioxx.tfc.GUI.GuiSkills;
+import com.dunk.tfc.GUI.GuiHealth;
+import com.dunk.tfc.GUI.GuiInventoryTFC;
+import com.dunk.tfc.GUI.GuiSkills;
 
 import codechicken.nei.api.INEIGuiAdapter;
 import net.minecraft.client.gui.inventory.GuiContainer;

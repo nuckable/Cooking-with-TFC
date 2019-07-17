@@ -1,9 +1,9 @@
 package straywolfe.cookingwithtfc.common.registries;
 
-import com.bioxx.tfc.Food.ItemFoodTFC;
-import com.bioxx.tfc.Items.ItemTerra;
-import com.bioxx.tfc.api.TFCFluids;
-import com.bioxx.tfc.api.TFCItems;
+import com.dunk.tfc.Food.ItemFoodTFC;
+import com.dunk.tfc.Items.ItemTerra;
+import com.dunk.tfc.api.TFCFluids;
+import com.dunk.tfc.api.TFCItems;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;

@@ -3,8 +3,8 @@ package straywolfe.cookingwithtfc.client.nei;
 import java.awt.Rectangle;
 import java.util.List;
 
-import com.bioxx.tfc.Food.ItemFoodTFC;
-import com.bioxx.tfc.api.TFC_ItemHeat;
+import com.dunk.tfc.Food.ItemFoodTFC;
+import com.dunk.tfc.api.TFC_ItemHeat;
 
 import codechicken.nei.PositionedStack;
 import codechicken.nei.recipe.TemplateRecipeHandler;

@@ -1,8 +1,8 @@
 package straywolfe.cookingwithtfc.client.nei;
 
-import com.bioxx.tfc.Food.ItemSalad;
-import com.bioxx.tfc.Food.ItemSandwich;
-import com.bioxx.tfc.api.TFCItems;
+import com.dunk.tfc.Food.ItemSalad;
+import com.dunk.tfc.Food.ItemSandwich;
+import com.dunk.tfc.api.TFCItems;
 
 import codechicken.nei.api.API;
 import codechicken.nei.api.IConfigureNEI;

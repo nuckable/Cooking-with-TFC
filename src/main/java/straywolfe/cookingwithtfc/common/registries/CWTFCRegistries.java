@@ -4,18 +4,18 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import com.bioxx.tfc.Core.Recipes;
-import com.bioxx.tfc.Food.ItemFoodTFC;
-import com.bioxx.tfc.Handlers.TFCFuelHandler;
-import com.bioxx.tfc.api.TFCBlocks;
-import com.bioxx.tfc.api.TFCFluids;
-import com.bioxx.tfc.api.TFCItems;
-import com.bioxx.tfc.api.Constant.Global;
-import com.bioxx.tfc.api.Crafting.CraftingManagerTFC;
-import com.bioxx.tfc.api.Crafting.KilnCraftingManager;
-import com.bioxx.tfc.api.Crafting.KilnRecipe;
-import com.bioxx.tfc.api.Crafting.QuernManager;
-import com.bioxx.tfc.api.Crafting.QuernRecipe;
+import com.dunk.tfc.Core.Recipes;
+import com.dunk.tfc.Food.ItemFoodTFC;
+import com.dunk.tfc.Handlers.TFCFuelHandler;
+import com.dunk.tfc.api.TFCBlocks;
+import com.dunk.tfc.api.TFCFluids;
+import com.dunk.tfc.api.TFCItems;
+import com.dunk.tfc.api.Constant.Global;
+import com.dunk.tfc.api.Crafting.CraftingManagerTFC;
+import com.dunk.tfc.api.Crafting.KilnCraftingManager;
+import com.dunk.tfc.api.Crafting.KilnRecipe;
+import com.dunk.tfc.api.Crafting.QuernManager;
+import com.dunk.tfc.api.Crafting.QuernRecipe;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.init.Blocks;
@@ -208,19 +208,19 @@ public class CWTFCRegistries
 		
 		if(Helper.isReqModVersion("tfcm", "0.10.0"))
 		{					
-			pressmanager.addRecipe(new PressRecipe(TFCItems.cherry, TFCMFluids.FRUITJUICE, 8));
-			pressmanager.addRecipe(new PressRecipe(TFCItems.plum, TFCMFluids.FRUITJUICE, 8));
-			pressmanager.addRecipe(new PressRecipe(TFCItems.wintergreenBerry, TFCMFluids.FRUITJUICE, 8));
-			pressmanager.addRecipe(new PressRecipe(TFCItems.blueberry, TFCMFluids.FRUITJUICE, 8));
-			pressmanager.addRecipe(new PressRecipe(TFCItems.raspberry, TFCMFluids.FRUITJUICE, 8));
-			pressmanager.addRecipe(new PressRecipe(TFCItems.strawberry, TFCMFluids.FRUITJUICE, 8));
-			pressmanager.addRecipe(new PressRecipe(TFCItems.blackberry, TFCMFluids.FRUITJUICE, 8));
-			pressmanager.addRecipe(new PressRecipe(TFCItems.bunchberry, TFCMFluids.FRUITJUICE, 8));
-			pressmanager.addRecipe(new PressRecipe(TFCItems.cranberry, TFCMFluids.FRUITJUICE, 8));
-			pressmanager.addRecipe(new PressRecipe(TFCItems.snowberry, TFCMFluids.FRUITJUICE, 8));
-			pressmanager.addRecipe(new PressRecipe(TFCItems.elderberry, TFCMFluids.FRUITJUICE, 8));
-			pressmanager.addRecipe(new PressRecipe(TFCItems.gooseberry, TFCMFluids.FRUITJUICE, 8));
-			pressmanager.addRecipe(new PressRecipe(TFCItems.cloudberry, TFCMFluids.FRUITJUICE, 8));
+			pressmanager.addRecipe(new PressRecipe(TFCItems.cherry, TFCMFluids.REDFRUITJUICE, 8));
+			pressmanager.addRecipe(new PressRecipe(TFCItems.plum, TFCMFluids.REDFRUITJUICE, 8));
+			pressmanager.addRecipe(new PressRecipe(TFCItems.wintergreenBerry, TFCMFluids.REDFRUITJUICE, 8));
+			pressmanager.addRecipe(new PressRecipe(TFCItems.blueberry, TFCMFluids.REDFRUITJUICE, 8));
+			pressmanager.addRecipe(new PressRecipe(TFCItems.raspberry, TFCMFluids.REDFRUITJUICE, 8));
+			pressmanager.addRecipe(new PressRecipe(TFCItems.strawberry, TFCMFluids.REDFRUITJUICE, 8));
+			pressmanager.addRecipe(new PressRecipe(TFCItems.blackberry, TFCMFluids.REDFRUITJUICE, 8));
+			pressmanager.addRecipe(new PressRecipe(TFCItems.bunchberry, TFCMFluids.REDFRUITJUICE, 8));
+			pressmanager.addRecipe(new PressRecipe(TFCItems.cranberry, TFCMFluids.REDFRUITJUICE, 8));
+			pressmanager.addRecipe(new PressRecipe(TFCItems.snowberry, TFCMFluids.REDFRUITJUICE, 8));
+			pressmanager.addRecipe(new PressRecipe(TFCItems.elderberry, TFCMFluids.REDFRUITJUICE, 8));
+			pressmanager.addRecipe(new PressRecipe(TFCItems.gooseberry, TFCMFluids.REDFRUITJUICE, 8));
+			pressmanager.addRecipe(new PressRecipe(TFCItems.cloudberry, TFCMFluids.REDFRUITJUICE, 8));
 		}
 	}
 	

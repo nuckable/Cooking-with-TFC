@@ -2,9 +2,9 @@ package straywolfe.cookingwithtfc.common.block;
 
 import java.util.Random;
 
-import com.bioxx.tfc.Reference;
-import com.bioxx.tfc.Blocks.Flora.BlockFruitWood;
-import com.bioxx.tfc.Core.TFC_Core;
+import com.dunk.tfc.Reference;
+import com.dunk.tfc.Blocks.Flora.BlockFruitWood;
+import com.dunk.tfc.Core.TFC_Core;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

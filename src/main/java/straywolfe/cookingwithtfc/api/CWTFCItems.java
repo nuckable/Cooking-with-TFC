@@ -2,7 +2,7 @@ package straywolfe.cookingwithtfc.api;
 
 import java.util.ArrayList;
 
-import com.bioxx.tfc.Items.ItemTerra;
+import com.dunk.tfc.Items.ItemTerra;
 
 import net.minecraft.item.Item;
 import straywolfe.cookingwithtfc.common.item.CWTFCItemSetup;

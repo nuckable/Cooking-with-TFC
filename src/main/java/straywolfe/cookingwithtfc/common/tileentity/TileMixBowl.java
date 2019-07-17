@@ -1,8 +1,8 @@
 package straywolfe.cookingwithtfc.common.tileentity;
 
-import com.bioxx.tfc.Core.TFC_Core;
-import com.bioxx.tfc.TileEntities.NetworkTileEntity;
-import com.bioxx.tfc.api.TFCItems;
+import com.dunk.tfc.Core.TFC_Core;
+import com.dunk.tfc.TileEntities.NetworkTileEntity;
+import com.dunk.tfc.api.TFCItems;
 
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.item.Item;

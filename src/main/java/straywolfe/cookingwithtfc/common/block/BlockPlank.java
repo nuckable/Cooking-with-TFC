@@ -1,6 +1,6 @@
 package straywolfe.cookingwithtfc.common.block;
 
-import com.bioxx.tfc.Blocks.BlockPlanks;
+import com.dunk.tfc.Blocks.BlockPlanks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

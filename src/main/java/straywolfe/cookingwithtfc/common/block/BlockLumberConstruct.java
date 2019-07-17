@@ -1,6 +1,6 @@
 package straywolfe.cookingwithtfc.common.block;
 
-import com.bioxx.tfc.Blocks.BlockWoodConstruct;
+import com.dunk.tfc.Blocks.BlockWoodConstruct;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

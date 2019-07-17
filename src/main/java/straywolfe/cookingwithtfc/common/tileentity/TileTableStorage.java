@@ -2,8 +2,8 @@ package straywolfe.cookingwithtfc.common.tileentity;
 
 import java.util.Random;
 
-import com.bioxx.tfc.Core.TFC_Core;
-import com.bioxx.tfc.TileEntities.NetworkTileEntity;
+import com.dunk.tfc.Core.TFC_Core;
+import com.dunk.tfc.TileEntities.NetworkTileEntity;
 
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;

@@ -2,7 +2,7 @@ package straywolfe.cookingwithtfc.common.worldgen;
 
 import java.util.Random;
 
-import com.bioxx.tfc.Core.TFC_Core;
+import com.dunk.tfc.Core.TFC_Core;
 
 import net.minecraft.block.Block;
 import net.minecraft.world.World;

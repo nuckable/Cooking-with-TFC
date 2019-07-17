@@ -2,9 +2,9 @@ package straywolfe.cookingwithtfc.common.core.helper;
 
 import java.util.Map;
 
-import com.bioxx.tfc.TerraFirmaCraft;
-import com.bioxx.tfc.Core.TFC_Core;
-import com.bioxx.tfc.api.Interfaces.IFood;
+import com.dunk.tfc.TerraFirmaCraft;
+import com.dunk.tfc.Core.TFC_Core;
+import com.dunk.tfc.api.Interfaces.IFood;
 
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.ModContainer;

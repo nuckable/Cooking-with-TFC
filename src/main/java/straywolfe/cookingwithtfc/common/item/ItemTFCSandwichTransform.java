@@ -2,9 +2,9 @@ package straywolfe.cookingwithtfc.common.item;
 
 import java.util.List;
 
-import com.bioxx.tfc.Reference;
-import com.bioxx.tfc.Core.Player.SkillStats.SkillRank;
-import com.bioxx.tfc.Render.Item.FoodItemRenderer;
+import com.dunk.tfc.Reference;
+import com.dunk.tfc.Core.Player.SkillStats.SkillRank;
+import com.dunk.tfc.Render.Item.FoodItemRenderer;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;

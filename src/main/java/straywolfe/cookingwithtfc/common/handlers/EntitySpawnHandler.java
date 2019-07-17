@@ -1,6 +1,6 @@
 package straywolfe.cookingwithtfc.common.handlers;
 
-import com.bioxx.tfc.TerraFirmaCraft;
+import com.dunk.tfc.TerraFirmaCraft;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.entity.player.EntityPlayer;

@@ -2,9 +2,9 @@ package straywolfe.cookingwithtfc.common.registries;
 
 import java.util.List;
 
-import com.bioxx.tfc.api.HeatIndex;
-import com.bioxx.tfc.api.HeatRegistry;
-import com.bioxx.tfc.api.TFCItems;
+import com.dunk.tfc.api.HeatIndex;
+import com.dunk.tfc.api.HeatRegistry;
+import com.dunk.tfc.api.TFCItems;
 
 import net.minecraft.item.ItemStack;
 import straywolfe.cookingwithtfc.api.managers.OvenManager;

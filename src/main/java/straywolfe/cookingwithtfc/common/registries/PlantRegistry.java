@@ -1,8 +1,8 @@
 package straywolfe.cookingwithtfc.common.registries;
 
-import com.bioxx.tfc.Core.TFC_Time;
-import com.bioxx.tfc.Food.FloraIndex;
-import com.bioxx.tfc.Food.FloraManager;
+import com.dunk.tfc.Core.TFC_Time;
+import com.dunk.tfc.Food.FloraIndex;
+import com.dunk.tfc.Food.FloraManager;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;

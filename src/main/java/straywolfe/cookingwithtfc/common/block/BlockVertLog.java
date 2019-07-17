@@ -2,7 +2,7 @@ package straywolfe.cookingwithtfc.common.block;
 
 import java.util.Random;
 
-import com.bioxx.tfc.Blocks.Flora.BlockLogVert;
+import com.dunk.tfc.Blocks.Flora.BlockLogVert;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

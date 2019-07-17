@@ -1,6 +1,6 @@
 package straywolfe.cookingwithtfc.api.managers;
 
-import com.bioxx.tfc.Core.TFC_Time;
+import com.dunk.tfc.Core.TFC_Time;
 
 import net.minecraft.nbt.NBTTagCompound;
 

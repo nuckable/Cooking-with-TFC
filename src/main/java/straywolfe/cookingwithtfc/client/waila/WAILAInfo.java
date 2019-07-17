@@ -2,11 +2,11 @@ package straywolfe.cookingwithtfc.client.waila;
 
 import java.util.List;
 
-import com.bioxx.tfc.Core.TFC_Time;
-import com.bioxx.tfc.Food.FloraIndex;
-import com.bioxx.tfc.Food.FloraManager;
-import com.bioxx.tfc.Food.ItemFoodTFC;
-import com.bioxx.tfc.api.TFCItems;
+import com.dunk.tfc.Core.TFC_Time;
+import com.dunk.tfc.Food.FloraIndex;
+import com.dunk.tfc.Food.FloraManager;
+import com.dunk.tfc.Food.ItemFoodTFC;
+import com.dunk.tfc.api.TFCItems;
 
 import mcp.mobius.waila.api.IWailaConfigHandler;
 import mcp.mobius.waila.api.IWailaDataAccessor;

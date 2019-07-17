@@ -13,6 +13,6 @@ public class ModInfo
 	public static final String MODID_TFC = "terrafirmacraft";
 	public static final String MODNAME_TFC = "TerraFirmaCraft";
 	
-	public static final String ModDependencies = "required-after:terrafirmacraft" +
+	public static final String ModDependencies = "required-after:terrafirmacraftplus" +
 												 ";required-after:tfcm";
 }

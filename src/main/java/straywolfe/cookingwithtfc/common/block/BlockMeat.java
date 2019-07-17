@@ -2,8 +2,8 @@ package straywolfe.cookingwithtfc.common.block;
 
 import java.util.List;
 
-import com.bioxx.tfc.Blocks.BlockTerraContainer;
-import com.bioxx.tfc.api.Food;
+import com.dunk.tfc.Blocks.BlockTerraContainer;
+import com.dunk.tfc.api.Food;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

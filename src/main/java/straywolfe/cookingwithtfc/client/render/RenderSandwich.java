@@ -2,10 +2,10 @@ package straywolfe.cookingwithtfc.client.render;
 
 import org.lwjgl.opengl.GL11;
 
-import com.bioxx.tfc.Food.ItemFoodTFC;
-import com.bioxx.tfc.api.Food;
-import com.bioxx.tfc.api.TFCItems;
-import com.bioxx.tfc.api.Enums.EnumFoodGroup;
+import com.dunk.tfc.Food.ItemFoodTFC;
+import com.dunk.tfc.api.Food;
+import com.dunk.tfc.api.TFCItems;
+import com.dunk.tfc.api.Enums.EnumFoodGroup;
 
 import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
 import net.minecraft.block.Block;

@@ -1,10 +1,10 @@
 package straywolfe.cookingwithtfc.common.tileentity;
 
-import com.bioxx.tfc.Core.TFC_Climate;
-import com.bioxx.tfc.Core.TFC_Time;
-import com.bioxx.tfc.Food.FloraIndex;
-import com.bioxx.tfc.Food.FloraManager;
-import com.bioxx.tfc.TileEntities.NetworkTileEntity;
+import com.dunk.tfc.Core.TFC_Climate;
+import com.dunk.tfc.Core.TFC_Time;
+import com.dunk.tfc.Food.FloraIndex;
+import com.dunk.tfc.Food.FloraManager;
+import com.dunk.tfc.TileEntities.NetworkTileEntity;
 
 import net.minecraft.block.Block;
 import net.minecraft.nbt.NBTTagCompound;

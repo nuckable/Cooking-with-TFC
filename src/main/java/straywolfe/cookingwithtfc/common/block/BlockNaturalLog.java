@@ -2,8 +2,8 @@ package straywolfe.cookingwithtfc.common.block;
 
 import java.util.Random;
 
-import com.bioxx.tfc.Blocks.Flora.BlockLogNatural;
-import com.bioxx.tfc.api.TFCItems;
+import com.dunk.tfc.Blocks.Flora.BlockLogNatural;
+import com.dunk.tfc.api.TFCItems;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -200,7 +200,7 @@ public class BlockNaturalLog extends BlockLogNatural
 		return world.getBlock(x, y, z) == this && world.getBlockMetadata(x, y, z) == meta;
 	}
 	
-	private void notifyLeaves(World world, int x, int y, int z)
+	protected void notifyLeaves(World world, int x, int y, int z)
 	{
 		world.notifyBlockOfNeighborChange(x + 1, y, z, Blocks.air);
 		world.notifyBlockOfNeighborChange(x - 1, y, z, Blocks.air);

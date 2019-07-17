@@ -1,6 +1,6 @@
 package straywolfe.cookingwithtfc.common.block;
 
-import com.bioxx.tfc.Blocks.Devices.BlockHopper;
+import com.dunk.tfc.Blocks.Devices.BlockHopper;
 
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;

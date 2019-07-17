@@ -3,7 +3,7 @@ package straywolfe.cookingwithtfc.common.tileentity;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.bioxx.tfc.TileEntities.TEWoodConstruct;
+import com.dunk.tfc.TileEntities.TEWoodConstruct;
 
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.item.ItemStack;

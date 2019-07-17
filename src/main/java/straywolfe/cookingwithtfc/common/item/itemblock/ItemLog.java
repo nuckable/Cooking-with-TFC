@@ -2,9 +2,9 @@ package straywolfe.cookingwithtfc.common.item.itemblock;
 
 import java.util.List;
 
-import com.bioxx.tfc.Items.ItemLogs;
-import com.bioxx.tfc.TileEntities.TELogPile;
-import com.bioxx.tfc.api.TFCBlocks;
+import com.dunk.tfc.Items.ItemLogs;
+import com.dunk.tfc.TileEntities.TELogPile;
+import com.dunk.tfc.api.TFCBlocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -199,7 +199,6 @@ public class ItemLog extends ItemLogs
 		world.playSoundEffect(x + 0.5, y + 0.5, z + 0.5, TFCBlocks.logNatural.stepSound.func_150496_b(), (TFCBlocks.logNatural.stepSound.getVolume() + 1.0F) / 2.0F, TFCBlocks.logNatural.stepSound.getPitch() * 0.8F);
 	}
 	
-	@Override
 	public void setSide(World world, ItemStack itemstack, int meta, int side, int x, int y, int z)
 	{
 		if (side == 2 || side == 3) {

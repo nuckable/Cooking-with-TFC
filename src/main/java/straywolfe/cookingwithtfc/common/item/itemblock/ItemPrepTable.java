@@ -2,11 +2,11 @@ package straywolfe.cookingwithtfc.common.item.itemblock;
 
 import java.util.List;
 
-import com.bioxx.tfc.Core.TFCTabs;
-import com.bioxx.tfc.Items.ItemBlocks.ItemTerraBlock;
-import com.bioxx.tfc.api.Constant.Global;
-import com.bioxx.tfc.api.Enums.EnumSize;
-import com.bioxx.tfc.api.Enums.EnumWeight;
+import com.dunk.tfc.Core.TFCTabs;
+import com.dunk.tfc.Items.ItemBlocks.ItemTerraBlock;
+import com.dunk.tfc.api.Constant.Global;
+import com.dunk.tfc.api.Enums.EnumSize;
+import com.dunk.tfc.api.Enums.EnumWeight;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;

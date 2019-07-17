@@ -2,9 +2,9 @@ package straywolfe.cookingwithtfc.common.item;
 
 import java.util.ArrayList;
 
-import com.bioxx.tfc.Core.Player.SkillStats.SkillRank;
-import com.bioxx.tfc.Items.ItemTerra;
-import com.bioxx.tfc.api.Enums.EnumFoodGroup;
+import com.dunk.tfc.Core.Player.SkillStats.SkillRank;
+import com.dunk.tfc.Items.ItemTerra;
+import com.dunk.tfc.api.Enums.EnumFoodGroup;
 
 import straywolfe.cookingwithtfc.api.CWTFCItems;
 import straywolfe.cookingwithtfc.common.item.itemblock.ItemGourdBlock;

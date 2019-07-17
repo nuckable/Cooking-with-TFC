@@ -2,8 +2,8 @@ package straywolfe.cookingwithtfc.common.item;
 
 import java.util.List;
 
-import com.bioxx.tfc.Items.ItemPlank;
-import com.bioxx.tfc.TileEntities.TEWoodConstruct;
+import com.dunk.tfc.Items.ItemPlank;
+import com.dunk.tfc.TileEntities.TEWoodConstruct;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;

@@ -2,9 +2,9 @@ package straywolfe.cookingwithtfc.common.item;
 
 import java.util.List;
 
-import com.bioxx.tfc.Reference;
-import com.bioxx.tfc.Render.Item.FoodItemRenderer;
-import com.bioxx.tfc.api.Enums.EnumFoodGroup;
+import com.dunk.tfc.Reference;
+import com.dunk.tfc.Render.Item.FoodItemRenderer;
+import com.dunk.tfc.api.Enums.EnumFoodGroup;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

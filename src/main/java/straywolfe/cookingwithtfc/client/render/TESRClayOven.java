@@ -3,9 +3,9 @@ package straywolfe.cookingwithtfc.client.render;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
-import com.bioxx.tfc.Render.TESR.TESRBase;
-import com.bioxx.tfc.api.Food;
-import com.bioxx.tfc.api.Interfaces.IFood;
+import com.dunk.tfc.Render.TESR.TESRBase;
+import com.dunk.tfc.api.Food;
+import com.dunk.tfc.api.Interfaces.IFood;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemRenderer;

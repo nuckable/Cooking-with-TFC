@@ -4,12 +4,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.bioxx.tfc.TerraFirmaCraft;
-import com.bioxx.tfc.Core.TFC_Core;
-import com.bioxx.tfc.Core.Player.FoodStatsTFC;
-import com.bioxx.tfc.api.Food;
-import com.bioxx.tfc.api.FoodRegistry;
-import com.bioxx.tfc.api.Interfaces.IFood;
+import com.dunk.tfc.TerraFirmaCraft;
+import com.dunk.tfc.Core.TFC_Core;
+import com.dunk.tfc.Core.Player.FoodStatsTFC;
+import com.dunk.tfc.api.Food;
+import com.dunk.tfc.api.FoodRegistry;
+import com.dunk.tfc.api.Interfaces.IFood;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;

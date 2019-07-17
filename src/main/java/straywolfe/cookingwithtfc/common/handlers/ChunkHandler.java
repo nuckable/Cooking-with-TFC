@@ -2,8 +2,8 @@ package straywolfe.cookingwithtfc.common.handlers;
 
 import java.util.Random;
 
-import com.bioxx.tfc.Core.TFC_Time;
-import com.bioxx.tfc.WorldGen.TFCBiome;
+import com.dunk.tfc.Core.TFC_Time;
+import com.dunk.tfc.WorldGen.TFCBiome;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.nbt.NBTTagCompound;

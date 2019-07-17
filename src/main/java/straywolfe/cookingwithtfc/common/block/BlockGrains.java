@@ -1,8 +1,8 @@
 package straywolfe.cookingwithtfc.common.block;
 
-import com.bioxx.tfc.Blocks.BlockTerraContainer;
-import com.bioxx.tfc.Core.TFC_Textures;
-import com.bioxx.tfc.api.TFCItems;
+import com.dunk.tfc.Blocks.BlockTerraContainer;
+import com.dunk.tfc.Core.TFC_Textures;
+import com.dunk.tfc.api.TFCItems;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

@@ -1,7 +1,7 @@
 package straywolfe.cookingwithtfc.common;
 
-import com.bioxx.tfc.Food.ItemFoodTFC;
-import com.bioxx.tfc.api.TFCItems;
+import com.dunk.tfc.Food.ItemFoodTFC;
+import com.dunk.tfc.api.TFCItems;
 
 import cpw.mods.fml.common.event.FMLInterModComms;
 import cpw.mods.fml.common.registry.GameRegistry;

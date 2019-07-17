@@ -2,7 +2,7 @@ package straywolfe.cookingwithtfc.client.render;
 
 import org.lwjgl.opengl.GL11;
 
-import com.bioxx.tfc.api.TFCItems;
+import com.dunk.tfc.api.TFCItems;
 
 import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
 import net.minecraft.block.Block;

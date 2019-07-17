@@ -8,7 +8,7 @@ import straywolfe.cookingwithtfc.common.lib.ModInfo;
 import straywolfe.cookingwithtfc.common.registries.CWTFCRegistries;
 import straywolfe.cookingwithtfc.common.registries.HeatedItemRecipes;
 
-import com.bioxx.tfc.TerraFirmaCraft;
+import com.dunk.tfc.TerraFirmaCraft;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;

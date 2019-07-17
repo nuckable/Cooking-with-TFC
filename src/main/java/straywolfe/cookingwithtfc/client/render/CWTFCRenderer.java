@@ -1,6 +1,6 @@
 package straywolfe.cookingwithtfc.client.render;
 
-import com.bioxx.tfc.Core.TFC_Core;
+import com.dunk.tfc.Core.TFC_Core;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.EntityRenderer;

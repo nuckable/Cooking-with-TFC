@@ -1,6 +1,6 @@
 package straywolfe.cookingwithtfc.common.item.itemblock;
 
-import com.bioxx.tfc.Items.ItemBlocks.ItemTerraBlock;
+import com.dunk.tfc.Items.ItemBlocks.ItemTerraBlock;
 
 import net.minecraft.block.Block;
 import straywolfe.cookingwithtfc.common.lib.Constants;

@@ -1,7 +1,7 @@
 package straywolfe.cookingwithtfc.common.tileentity;
 
-import com.bioxx.tfc.Core.TFC_Time;
-import com.bioxx.tfc.TileEntities.NetworkTileEntity;
+import com.dunk.tfc.Core.TFC_Time;
+import com.dunk.tfc.TileEntities.NetworkTileEntity;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;

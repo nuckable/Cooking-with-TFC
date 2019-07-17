@@ -1,6 +1,6 @@
 package straywolfe.cookingwithtfc.api;
 
-import com.bioxx.tfc.Core.FluidBaseTFC;
+import com.dunk.tfc.Core.FluidBaseTFC;
 
 import net.minecraftforge.fluids.Fluid;
 

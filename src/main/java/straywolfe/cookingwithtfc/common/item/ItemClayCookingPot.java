@@ -2,10 +2,10 @@ package straywolfe.cookingwithtfc.common.item;
 
 import java.util.List;
 
-import com.bioxx.tfc.Items.ItemTerra;
-import com.bioxx.tfc.Items.Pottery.ItemPotteryBase;
-import com.bioxx.tfc.TileEntities.TEFirepit;
-import com.bioxx.tfc.api.TFCBlocks;
+import com.dunk.tfc.Items.ItemTerra;
+import com.dunk.tfc.Items.Pottery.ItemPotteryBase;
+import com.dunk.tfc.TileEntities.TEFirepit;
+import com.dunk.tfc.api.TFCBlocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IIconRegister;

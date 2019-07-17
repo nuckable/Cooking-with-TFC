@@ -1,11 +1,11 @@
 package straywolfe.cookingwithtfc.common.tileentity;
 
-import com.bioxx.tfc.Core.TFC_Core;
-import com.bioxx.tfc.TileEntities.NetworkTileEntity;
-import com.bioxx.tfc.api.Food;
-import com.bioxx.tfc.api.TFCItems;
-import com.bioxx.tfc.api.Enums.EnumFoodGroup;
-import com.bioxx.tfc.Food.ItemFoodTFC;
+import com.dunk.tfc.Core.TFC_Core;
+import com.dunk.tfc.TileEntities.NetworkTileEntity;
+import com.dunk.tfc.api.Food;
+import com.dunk.tfc.api.TFCItems;
+import com.dunk.tfc.api.Enums.EnumFoodGroup;
+import com.dunk.tfc.Food.ItemFoodTFC;
 
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.item.Item;
@@ -169,7 +169,7 @@ public class TileBowl extends NetworkTileEntity
 	{
 		if(!worldObj.isRemote)
 		{			
-			TFC_Core.handleItemTicking(saladContents, worldObj,  xCoord, yCoord, zCoord, 1.1f);
+			TFC_Core.handleItemTicking(saladContents, worldObj,  xCoord, yCoord, zCoord, 1.1f, false);
 		}
 	}
 	

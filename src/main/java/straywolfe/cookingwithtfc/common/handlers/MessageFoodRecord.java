@@ -1,6 +1,6 @@
 package straywolfe.cookingwithtfc.common.handlers;
 
-import com.bioxx.tfc.Handlers.Network.AbstractPacket;
+import com.dunk.tfc.Handlers.Network.AbstractPacket;
 
 import cpw.mods.fml.common.network.ByteBufUtils;
 import io.netty.buffer.ByteBuf;

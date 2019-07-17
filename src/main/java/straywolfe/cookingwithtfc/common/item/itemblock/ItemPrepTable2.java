@@ -1,6 +1,6 @@
 package straywolfe.cookingwithtfc.common.item.itemblock;
 
-import com.bioxx.tfc.api.Constant.Global;
+import com.dunk.tfc.api.Constant.Global;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;

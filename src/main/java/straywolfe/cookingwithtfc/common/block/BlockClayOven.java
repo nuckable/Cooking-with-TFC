@@ -2,14 +2,14 @@ package straywolfe.cookingwithtfc.common.block;
 
 import java.util.Random;
 
-import com.bioxx.tfc.Reference;
-import com.bioxx.tfc.Blocks.BlockTerraContainer;
-import com.bioxx.tfc.Core.TFC_Core;
-import com.bioxx.tfc.Core.TFC_Sounds;
-import com.bioxx.tfc.Core.TFC_Time;
-import com.bioxx.tfc.Items.ItemCoal;
-import com.bioxx.tfc.Items.ItemLogs;
-import com.bioxx.tfc.Items.Tools.ItemFirestarter;
+import com.dunk.tfc.Reference;
+import com.dunk.tfc.Blocks.BlockTerraContainer;
+import com.dunk.tfc.Core.TFC_Core;
+import com.dunk.tfc.Core.TFC_Sounds;
+import com.dunk.tfc.Core.TFC_Time;
+import com.dunk.tfc.Items.ItemCoal;
+import com.dunk.tfc.Items.ItemLogs;
+import com.dunk.tfc.Items.Tools.ItemFirestarter;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

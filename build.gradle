@@ -1,21 +1,16 @@
-buildscript 
-{
-    repositories 
-	{
+buildscript {
+    repositories {
         mavenCentral()
-        maven 
-		{
+        maven {
             name = "Minecraft Forge"
             url = "http://files.minecraftforge.net/maven"
         }
-        maven 
-		{
+        maven {
             name = "sonatype"
             url = "https://oss.sonatype.org/content/repositories/snapshots/"
         }
     }
-    dependencies 
-	{
+    dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
     }
 }
@@ -23,116 +18,90 @@ buildscript
 // define the properties file
 ext.configFile = file "build.prop"
 
-configFile.withReader 
-{
+configFile.withReader {
+    // read config.  it shall from now on be referenced as simply config or as project.config
     def prop = new Properties()
     prop.load(it)
     project.ext.config = new ConfigSlurper().parse prop
 }
 
-allprojects 
-{
+allprojects {
     apply plugin: 'java'
     apply plugin: 'forge'
     apply plugin: 'maven'
-	
     group = config.group_name
     version = config.mod_version
-    archivesBaseName = config.mod_id
+    archivesBaseName = "[${config.minecraft_version}]${config.mod_id}"
 
-    minecraft 
-	{
+    minecraft {
         version = config.minecraft_version + "-" + config.forge_version
-		
-		replaceIn "common/lib/ModInfo.java"
-		replace "@MOD_VERSION@", "${config.mod_version}"
-	
-        if(file('../run').exists()) 
-		{
+        if(file('../run').exists()) {
             runDir = "../run"
-        } 
-		else 
-		{
+        } else {
             runDir = ""
         }
     }
 }
 
-repositories 
-{
-    maven { 
-    	// The repo from which to get waila
+repositories {
+    maven {
+        // The repo from which to get waila
         name "Mobius Repo"
         url "http://mobiusstrip.eu/maven"
     }
-    maven { 
-    	// the repo from which to get NEI and stuff 
+    maven {
+        // the repo from which to get NEI and stuff 
         name 'CB Repo'
         url "http://chickenbones.net/maven/"
     }
 }
- 
-dependencies 
-{
-	compile "codechicken:CodeChickenCore:1.7.10-1.0.4.35:dev"
-	compile "codechicken:CodeChickenLib:1.7.10-1.1.3.127:dev"
-	compile "codechicken:NotEnoughItems:1.7.10-1.0.4.95:dev"
-	compile "mcp.mobius.waila:Waila:1.5.11-RC2-NONEI_1.7.10"
+
+dependencies {
+    // Forcing version numbers for everything and using NO-NEI WAILA since the "transitive dependency resolution (gradle magic)" is currently borked.
+    compile "codechicken:CodeChickenCore:1.7.10-1.0.4.35:dev"
+    compile "codechicken:CodeChickenLib:1.7.10-1.1.3.127:dev"
+    compile "codechicken:NotEnoughItems:1.7.10-1.0.4.95:dev"
+    compile "mcp.mobius.waila:Waila:1.5.11-RC2-NONEI_1.7.10"
 }
 
 //Creates a compiled de-obfuscated jar
-task deobfJar(type: Jar){
+task deobfJar(type: Jar) {
     from sourceSets.main.output
     appendix = 'deobf'
 }
 
 //creates a jar containing only the src
-task sourceJar(type: Jar){
+task sourceJar(type: Jar) {
     from sourceSets.main.allSource
     appendix = 'src'
 }
 
-task buildNumber{
-	if(config.release_type == 'snapshot'){
-		def build = Integer.parseInt(config.build_number) + 1
-		project.version = "${config.minecraft_version}-${config.mod_version}.${build}"
-		ant.propertyfile(file: "build.prop") 
-		{
-			entry(key: "build_number", value: build)
-		}
-	}
-	else{
-		project.version = "${config.minecraft_version}-${config.mod_version}"
-	}
+tasks.build.dependsOn('sourceJar', 'deobfJar')
+
+dependencies {
+    compile fileTree(dir:'libs',include:'*.jar')
 }
 
-tasks.build.dependsOn('buildNumber', 'sourceJar', 'deobfJar')
-
-processResources 
-{
-	inputs.property "mod_version", project.version
-	inputs.property "tfc_version", project.config.tfc_version
-    inputs.property "minecraft_version", project.config.minecraft_version
-	
-	from(sourceSets.main.resources.srcDirs) 
-	{
+processResources {
+    // First we just copy in the mcmod.info file
+    from(sourceSets.main.resources.srcDirs) {
         include '**/*.info'
         include '**/*.prop'
 
+        // replaces
         expand ([
-            'mod_version': project.version,
-            'tfc_version': project.config.tfc_version,
-            'minecraft_version': project.config.minecraft_version,
+                'mod_version': project.config.mod_version,
+                'tfc_version': project.config.tfc_version,
+                'minecraft_version': project.config.minecraft_version,
         ])
     }
-    
-    from(sourceSets.main.resources.srcDirs) 
-	{
+    // copy everything else, that we didn't copy before
+    from(sourceSets.main.resources.srcDirs) {
         exclude '**/*.info'
         exclude '**/*.prop'
     }
 }
 
-task wrapper(type: Wrapper){
-	gradleVersion = '2.2.1'
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.2.1'
 }

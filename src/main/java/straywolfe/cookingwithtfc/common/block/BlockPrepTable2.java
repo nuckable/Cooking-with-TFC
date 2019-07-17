@@ -1,7 +1,7 @@
 package straywolfe.cookingwithtfc.common.block;
 
-import com.bioxx.tfc.api.TFCBlocks;
-import com.bioxx.tfc.api.Constant.Global;
+import com.dunk.tfc.api.TFCBlocks;
+import com.dunk.tfc.api.Constant.Global;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

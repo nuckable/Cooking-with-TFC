@@ -3,9 +3,9 @@ package straywolfe.cookingwithtfc.client;
 import straywolfe.cookingwithtfc.common.CommonProxyCWTFC;
 import straywolfe.cookingwithtfc.common.tileentity.*;
 
-import com.bioxx.tfc.Core.ColorizerFoliageTFC;
-import com.bioxx.tfc.Core.TFC_Climate;
-import com.bioxx.tfc.Core.TFC_Time;
+import com.dunk.tfc.Core.ColorizerFoliageTFC;
+import com.dunk.tfc.Core.TFC_Climate;
+import com.dunk.tfc.Core.TFC_Time;
 
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;

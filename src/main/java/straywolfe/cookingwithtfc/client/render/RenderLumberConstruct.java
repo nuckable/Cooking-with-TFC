@@ -1,6 +1,6 @@
 package straywolfe.cookingwithtfc.client.render;
 
-import com.bioxx.tfc.TileEntities.TEWoodConstruct;
+import com.dunk.tfc.TileEntities.TEWoodConstruct;
 
 import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
 import net.minecraft.block.Block;
