@@ -26,7 +26,6 @@ public class ClientProxyCWTFC extends CommonProxyCWTFC
 	{
 		super.registerTileEntities(false);
 		ClientRegistry.registerTileEntity(TileClayOven.class, "TileClayOven", new TESRClayOven());
-		ClientRegistry.registerTileEntity(TileGourd.class, "TilePumpkin", new TESRGourd());
 	}
 	
 	@Override

@@ -38,11 +38,10 @@ public class CommonProxyCWTFC
 		if(clientReg)
 		{
 			GameRegistry.registerTileEntity(TileClayOven.class, "TileClayOven");
-			GameRegistry.registerTileEntity(TileGourd.class, "TilePumpkin");
 		}
 	}
 	
-	public void registerFluids()
+	void registerFluids()
 	{
 		FluidRegistry.registerFluid(CWTFCFluids.BROTH);
 		FluidRegistry.registerFluid(CWTFCFluids.VEGETABLESOUP);
@@ -53,7 +52,7 @@ public class CommonProxyCWTFC
 		FluidRegistry.registerFluid(CWTFCFluids.FISHCHOWDER);
 	}
 	
-	public void setupFluids()
+	void setupFluids()
 	{
 		FluidContainerRegistry.registerFluidContainer(new FluidStack(CWTFCFluids.BROTH, 1000), ItemFoodTFC.createTag(new ItemStack(CWTFCItems.Broth), 20, 0), new ItemStack(TFCItems.potteryJug, 1, 1));
 		FluidContainerRegistry.registerFluidContainer(new FluidStack(CWTFCFluids.VEGETABLESOUP, 250), ItemFoodTFC.createTag(new ItemStack(CWTFCItems.VegetableSoup), 10, 0), new ItemStack(TFCItems.potteryBowl, 1, 1));
@@ -64,7 +63,7 @@ public class CommonProxyCWTFC
 		FluidContainerRegistry.registerFluidContainer(new FluidStack(CWTFCFluids.FISHCHOWDER, 250), ItemFoodTFC.createTag(new ItemStack(CWTFCItems.FishChowder), 10, 0), new ItemStack(TFCItems.potteryBowl, 1, 1));
 	}
 	
-	public void registerWAILA()
+	void registerWAILA()
 	{
 		FMLInterModComms.sendMessage("Waila", "register", "straywolfe.cookingwithtfc.client.waila.WAILAInfo.callbackRegister");
 	}
@@ -74,7 +73,7 @@ public class CommonProxyCWTFC
 		return MinecraftServer.getServer().getEntityWorld();
 	}
 	
-	public void registerWorldGen()
+	void registerWorldGen()
 	{
 		GameRegistry.registerWorldGenerator(new WorldGenTrees(), 8);
 		GameRegistry.registerWorldGenerator(new WorldGenCrops(), 9);

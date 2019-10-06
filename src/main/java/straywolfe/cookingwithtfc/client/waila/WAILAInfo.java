@@ -95,8 +95,6 @@ public class WAILAInfo implements IWailaDataProvider
 			return nutLeavesStack(accessor, config);
 		else if(block instanceof BlockNutTree)
 			return nutTreeStack(accessor, config);
-		else if(tileEntity instanceof TileGourd)
-			return gourdStack(accessor, config);
 		else if(tileEntity instanceof TileCrop)
 			return cropStack(accessor, config);
 			
@@ -121,8 +119,6 @@ public class WAILAInfo implements IWailaDataProvider
 			currenttip = nutLeavesHead(itemStack, currenttip, accessor, config);
 		else if(block instanceof BlockNutTree)
 			currenttip = fruitTreeHead(itemStack, currenttip, accessor, config);
-		else if(tileEntity instanceof TileGourd)
-			currenttip = gourdHead(itemStack, currenttip, accessor, config);
 		else if(tileEntity instanceof TileCrop)
 			currenttip = cropHead(itemStack, currenttip, accessor, config);
 		
@@ -322,39 +318,6 @@ public class WAILAInfo implements IWailaDataProvider
 		return currenttip;
 	}
 	
-	public ItemStack gourdStack(IWailaDataAccessor accessor, IWailaConfigHandler config)
-	{
-		NBTTagCompound tag = accessor.getNBTData();
-		int type = tag.getInteger("type");
-		
-		switch(type)
-		{
-			case 0: return new ItemStack(CWTFCItems.pumpkinBlock);
-			case 1: return new ItemStack(CWTFCItems.melonBlock);
-			case 2: return new ItemStack(CWTFCItems.jackolanternBlock);
-			default: return new ItemStack(CWTFCItems.pumpkinBlock);
-		}
-	}
-	
-	public List<String> gourdHead(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config) 
-	{
-		NBTTagCompound tag = accessor.getNBTData();
-		
-		int type = tag.getInteger("type");
-		String gourdName = "";
-		
-		switch(type)
-		{
-			case 1: gourdName = Helper.translate("item.Watermelon.name"); break;
-			case 2: gourdName = Helper.translate("item.JackOLantern.name"); break;
-			default: gourdName = Helper.translate("item.Pumpkin.name"); break;
-		}
-		
-		currenttip.set(0, EnumChatFormatting.WHITE.toString() + gourdName);
-
-		return currenttip;
-	}
-	
 	public ItemStack cropStack(IWailaDataAccessor accessor, IWailaConfigHandler config)
 	{
 		NBTTagCompound tag = accessor.getNBTData();
@@ -364,7 +327,7 @@ public class WAILAInfo implements IWailaDataProvider
 		if(crop != null)
 			return ItemFoodTFC.createTag(new ItemStack(crop.output1));
 		else
-			return ItemFoodTFC.createTag(new ItemStack(CWTFCItems.watermelon));
+			return null;
 	}
 	
 	public List<String> cropHead(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config) 

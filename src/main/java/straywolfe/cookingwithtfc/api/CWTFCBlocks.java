@@ -27,7 +27,6 @@ public class CWTFCBlocks
 	public static Block prepTableW;
 	public static Block prepTable2W;
 	
-	public static Block customGourd;
 	public static Block customCrop;
 	public static Block customLeaves;
 	public static Block naturalLog;
@@ -39,7 +38,8 @@ public class CWTFCBlocks
 	public static Block nutTreeLeaves;
 	public static Block woodPlank;
 	public static Block lumberConstruct;
-	
+	public static Block logNaturalCWTFC;
+
 	public static int mixingBowlRenderID;
 	public static int prepTableRenderID;
 	public static int meatRenderID;
@@ -85,7 +85,6 @@ public class CWTFCBlocks
 		prepTableW = new BlockPrepTable();
 		prepTable2W = new BlockPrepTable2();
 		
-		customGourd = new BlockGourd();
 		customCrop = new BlockCrop();
 
 		customLeaves = new BlockLeaves();
@@ -111,7 +110,6 @@ public class CWTFCBlocks
 		GameRegistry.registerBlock(bowlCWTFC, "bowlCWTFC");
 		GameRegistry.registerBlock(clayOven, "clayOven");
 		GameRegistry.registerBlock(tableStorage, "tableStorage");
-		GameRegistry.registerBlock(customGourd, "customGourd");
 		GameRegistry.registerBlock(customCrop, "customCrop");
 		GameRegistry.registerBlock(customLeaves, ItemCustomWood.class, "customLeaves");
 		GameRegistry.registerBlock(naturalLog, ItemCustomWood.class, "naturalLog");
@@ -140,7 +138,6 @@ public class CWTFCBlocks
 		Blocks.fire.setFireInfo(customLeaves, 20, 20);
 		Blocks.fire.setFireInfo(GrainsBlock, 20, 20);
 		Blocks.fire.setFireInfo(customCrop, 20, 20);
-		Blocks.fire.setFireInfo(customGourd, 20, 20);
 		Blocks.fire.setFireInfo(customSapling, 20, 20);
 		Blocks.fire.setFireInfo(nutTreeLeaves, 20, 20);
 		

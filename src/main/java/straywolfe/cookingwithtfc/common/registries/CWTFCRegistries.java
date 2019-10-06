@@ -83,18 +83,6 @@ public class CWTFCRegistries
 		removeRefiningRecipe(TFCItems.oatWhole, TFCItems.oatGrain);
 		removeRefiningRecipe(TFCItems.riceWhole, TFCItems.riceGrain);
 		
-		if(!Settings.disableMushrooms)
-		{
-			GameRegistry.addShapelessRecipe(new ItemStack(CWTFCItems.sporesBrownMushroom), new ItemStack(TFCBlocks.fungi));
-			GameRegistry.addShapelessRecipe(new ItemStack(CWTFCItems.sporesRedMushroom), new ItemStack(TFCBlocks.fungi, 1, 1));
-		}
-		
-		if(Settings.vanillaMelonRecipe)
-			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemFromBlock(Blocks.melon_block)), new ItemStack(CWTFCItems.melonBlock));
-		
-		if(Settings.tfcPumpkinRecipe)
-			GameRegistry.addShapelessRecipe(new ItemStack(Item.getItemFromBlock(TFCBlocks.pumpkin)), new ItemStack(CWTFCItems.pumpkinBlock));
-		
 		for(int i = 0; i < Constants.WOODTYPES.length; i++)
 		{
 			GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(CWTFCItems.singlePlank, 8, i), new ItemStack(CWTFCItems.logs, 1, i), "itemSaw"));

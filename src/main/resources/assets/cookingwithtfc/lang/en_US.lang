@@ -53,12 +53,6 @@ tile.LumberConstruct.name=Lumber
 #=========
 #= Items =
 #=========
-item.SlicedWatermelon.name=Sliced Watermelon
-item.Pumpkin.name=Pumpkin
-item.Watermelon.name=Watermelon
-
-item.BrownMushroom.name=Brown Mushroom
-item.RedMushroom.name=Red Mushroom
 item.Lettuce.name=Lettuce
 item.Celery.name=Celery
 
@@ -102,10 +96,6 @@ item.VenisonSteakSandwich.name=Steak Sandwich
 item.VegetarianSandwich.name=Vegetarian Sandwich
 item.ToastSandwich.name=Bread Sandwich
 
-item.PumpkinSeeds.name=Pumpkin Seeds
-item.MelonSeeds.name=Watermelon Seeds
-item.BrownMushroomSpores.name=Brown Mushroom Spores
-item.RedMushroomSpores.name=Red Mushroom Spores
 item.LettuceSeeds.name=Lettuce Seeds
 item.CelerySeeds.name=Celery Seeds
 item.PeanutSeeds.name=Peanut Seeds

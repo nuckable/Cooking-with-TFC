@@ -29,9 +29,6 @@ public class RenderCrop implements ISimpleBlockRenderingHandler
 				
 				switch(cropID)
 				{
-					case PlantRegistry.WATERMELON:
-					case PlantRegistry.PUMPKIN:
-						renderGourd(blockCrop, meta, te, myRenderer); break;
 					case PlantRegistry.CELERY:
 					case PlantRegistry.LETTUCE:
 					case PlantRegistry.PEANUT:
@@ -138,40 +135,6 @@ public class RenderCrop implements ISimpleBlockRenderingHandler
         tessellator.addVertexWithUV(d7, y + 0.0D, d10, d3, d6);
         tessellator.addVertexWithUV(d8, y + 0.0D, d10, d5, d6);
         tessellator.addVertexWithUV(d8, y + 1.0D, d10, d5, d4);
-	}
-	
-	private void renderGourd(BlockCrop blockCrop, int meta, TileCrop te, CWTFCRenderer myRenderer)
-	{
-		IIcon[] iconsGourd = new IIcon[4];
-		
-		iconsGourd[0] = blockCrop.getCropIcon("Plant_Top");
-		iconsGourd[1] = blockCrop.getCropIcon("Plant_Bottom");
-		
-		if(te.getCropID() == PlantRegistry.WATERMELON)
-		{
-			iconsGourd[2] = blockCrop.getCropIcon("Melon_Top");
-			iconsGourd[3] = blockCrop.getCropIcon("Melon_Side");
-		}
-		else
-		{
-			iconsGourd[2] = blockCrop.getCropIcon("Pumpkin_Top");
-			iconsGourd[3] = blockCrop.getCropIcon("Pumpkin_Side");
-		}
-		
-		int stage = (int) Math.floor(te.growth);
-		if(stage > 4)
-			stage = 4;
-		
-		if(stage == 0)
-		renderFirstStage(myRenderer, meta, iconsGourd);
-		else if(stage == 1)
-			renderSecondStage(myRenderer, meta, iconsGourd);
-		else if(stage == 2)
-			renderThirdStage(myRenderer, meta, iconsGourd);
-		else if(stage == 3)
-			renderFourthStage(myRenderer, meta, iconsGourd);
-		else if(stage == 4)
-			renderFinalStage(myRenderer, meta, iconsGourd);	
 	}
 	
 	private void renderFirstStage(CWTFCRenderer myRenderer, int meta, IIcon[] iconsGourd)

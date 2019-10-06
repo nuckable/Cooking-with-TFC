@@ -8,16 +8,9 @@ public class CWTFCItemRegistry extends CWTFCItems
 	public static void registerItem()
 	{		
 		//Vegetables
-		GameRegistry.registerItem(brownMushroom, brownMushroom.getUnlocalizedName());
-		GameRegistry.registerItem(redMushroom, redMushroom.getUnlocalizedName());
 		GameRegistry.registerItem(lettuce, lettuce.getUnlocalizedName());
 		GameRegistry.registerItem(celery, celery.getUnlocalizedName());
 		
-		//Fruits
-		GameRegistry.registerItem(watermelon, watermelon.getUnlocalizedName());
-		GameRegistry.registerItem(melonBlock, melonBlock.getUnlocalizedName());
-		GameRegistry.registerItem(pumpkinBlock, pumpkinBlock.getUnlocalizedName());
-		GameRegistry.registerItem(jackolanternBlock, jackolanternBlock.getUnlocalizedName());
 		
 		//Protein
 		GameRegistry.registerItem(Broth, Broth.getUnlocalizedName());
@@ -73,10 +66,6 @@ public class CWTFCItemRegistry extends CWTFCItems
 		//Seeds
 		GameRegistry.registerItem(seedsCelery, seedsCelery.getUnlocalizedName());
 		GameRegistry.registerItem(seedsLettuce, seedsLettuce.getUnlocalizedName());
-		GameRegistry.registerItem(seedsPumpkin, seedsPumpkin.getUnlocalizedName());
-		GameRegistry.registerItem(seedsMelon, seedsMelon.getUnlocalizedName());
-		GameRegistry.registerItem(sporesBrownMushroom, sporesBrownMushroom.getUnlocalizedName());
-		GameRegistry.registerItem(sporesRedMushroom, sporesRedMushroom.getUnlocalizedName());
 		GameRegistry.registerItem(seedsPeanut, seedsPeanut.getUnlocalizedName());
 		
 		//Clay Items

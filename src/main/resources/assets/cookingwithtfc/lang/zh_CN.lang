@@ -4,133 +4,124 @@
 #==========
 #= Blocks =
 #==========
-tile.GrainsBlock.name=谷粒
-tile.MixingBowl.Clay.name=粘土搅拌杅
-tile.MixingBowl.Ceramic.name=陶瓷搅拌杅
-tile.CookingPot.name=烹饪锅
+tile.GrainsBlock.name=è°·ç²’
+tile.MixingBowl.Clay.name=ç²˜åœŸæ�…æ‹Œæ�…
+tile.MixingBowl.Ceramic.name=é™¶ç“·æ�…æ‹Œæ�…
+tile.CookingPot.name=çƒ¹é¥ªé”…
 
-tile.PrepTableBlock.Oak.name=橡木食品準備表
-tile.PrepTableBlock.Aspen.name=阿斯彭食品準備表
-tile.PrepTableBlock.Birch.name=樺木食品準備表
-tile.PrepTableBlock.Chestnut.name=栗子食品準備表
-tile.PrepTableBlock.Douglas Fir.name=道格拉斯冷杉食品準備表
-tile.PrepTableBlock.Hickory.name=山核桃食品準備表
-tile.PrepTableBlock.Maple.name=楓葉食品準備表
-tile.PrepTableBlock.Ash.name=灰食品準備表
-tile.PrepTableBlock.Pine.name=松食品準備表
-tile.PrepTableBlock.Sequoia.name=紅杉食品準備表
-tile.PrepTableBlock.Spruce.name=雲杉食品準備表
-tile.PrepTableBlock.Sycamore.name=美國梧桐食物製備表
-tile.PrepTableBlock.White Cedar.name=白雪松食品準備表
-tile.PrepTableBlock.White Elm.name=白榆樹食物製備表
-tile.PrepTableBlock.Willow.name=柳食物製備表
-tile.PrepTableBlock.Kapok.name=木棉食物製備表
-tile.PrepTableBlock.Acacia.name=相思食物製備表
+tile.PrepTableBlock.Oak.name=æ©¡æœ¨é£Ÿå“�æº–å‚™è¡¨
+tile.PrepTableBlock.Aspen.name=é˜¿æ–¯å½­é£Ÿå“�æº–å‚™è¡¨
+tile.PrepTableBlock.Birch.name=æ¨ºæœ¨é£Ÿå“�æº–å‚™è¡¨
+tile.PrepTableBlock.Chestnut.name=æ —å­�é£Ÿå“�æº–å‚™è¡¨
+tile.PrepTableBlock.Douglas Fir.name=é�“æ ¼æ‹‰æ–¯å†·æ�‰é£Ÿå“�æº–å‚™è¡¨
+tile.PrepTableBlock.Hickory.name=å±±æ ¸æ¡ƒé£Ÿå“�æº–å‚™è¡¨
+tile.PrepTableBlock.Maple.name=æ¥“è‘‰é£Ÿå“�æº–å‚™è¡¨
+tile.PrepTableBlock.Ash.name=ç�°é£Ÿå“�æº–å‚™è¡¨
+tile.PrepTableBlock.Pine.name=æ�¾é£Ÿå“�æº–å‚™è¡¨
+tile.PrepTableBlock.Sequoia.name=ç´…æ�‰é£Ÿå“�æº–å‚™è¡¨
+tile.PrepTableBlock.Spruce.name=é›²æ�‰é£Ÿå“�æº–å‚™è¡¨
+tile.PrepTableBlock.Sycamore.name=ç¾Žåœ‹æ¢§æ¡�é£Ÿç‰©è£½å‚™è¡¨
+tile.PrepTableBlock.White Cedar.name=ç™½é›ªæ�¾é£Ÿå“�æº–å‚™è¡¨
+tile.PrepTableBlock.White Elm.name=ç™½æ¦†æ¨¹é£Ÿç‰©è£½å‚™è¡¨
+tile.PrepTableBlock.Willow.name=æŸ³é£Ÿç‰©è£½å‚™è¡¨
+tile.PrepTableBlock.Kapok.name=æœ¨æ£‰é£Ÿç‰©è£½å‚™è¡¨
+tile.PrepTableBlock.Acacia.name=ç›¸æ€�é£Ÿç‰©è£½å‚™è¡¨
 
-tile.MeatsBlock.name=肉
-tile.ClayOven.name=粘土烤炉
-tile.TableStorage.name=食物桌物品
-tile.Sapling.Walnut.name=核桃树苗
-tile.Leaves.Walnut.name=核桃叶
-tile.Log.Walnut.name=核桃原木
-tile.WoodVert.Walnut.name=核桃原木
+tile.MeatsBlock.name=è‚‰
+tile.ClayOven.name=ç²˜åœŸçƒ¤ç‚‰
+tile.TableStorage.name=é£Ÿç‰©æ¡Œç‰©å“�
+tile.Sapling.Walnut.name=æ ¸æ¡ƒæ ‘è‹—
+tile.Leaves.Walnut.name=æ ¸æ¡ƒå�¶
+tile.Log.Walnut.name=æ ¸æ¡ƒåŽŸæœ¨
+tile.WoodVert.Walnut.name=æ ¸æ¡ƒåŽŸæœ¨
 
-tile.NutTreeLog.Almond.name=杏仁树苗
-tile.NutTreeLog.Cashew.name=腰果树苗
-tile.NutTreeLog.Coconut.name=椰子树苗
-tile.NutTreeLog.Hazelnut.name=榛子树苗
-tile.NutTreeLog.Macadamia.name=澳洲坚果树苗
-tile.NutTreeLog.Pistachio.name=开心果树苗
+tile.NutTreeLog.Almond.name=æ��ä»�æ ‘è‹—
+tile.NutTreeLog.Cashew.name=è…°æžœæ ‘è‹—
+tile.NutTreeLog.Coconut.name=æ¤°å­�æ ‘è‹—
+tile.NutTreeLog.Hazelnut.name=æ¦›å­�æ ‘è‹—
+tile.NutTreeLog.Macadamia.name=æ¾³æ´²å�šæžœæ ‘è‹—
+tile.NutTreeLog.Pistachio.name=å¼€å¿ƒæžœæ ‘è‹—
 
-tile.woodPlank.Walnut.name=核桃木板
-tile.LumberConstruct.name=木材建筑
+tile.woodPlank.Walnut.name=æ ¸æ¡ƒæœ¨æ�¿
+tile.LumberConstruct.name=æœ¨æ��å»ºç­‘
 
 #=========
 #= Items =
 #=========
-item.SlicedWatermelon.name=切片西瓜
-item.Pumpkin.name=南瓜
-item.Watermelon.name=西瓜
-item.BrownMushroom.name=棕蘑菇
-item.RedMushroom.name=红蘑菇
-item.Lettuce.name=莴苣
-item.Celery.name=芹菜
+item.Lettuce.name=èŽ´è‹£
+item.Celery.name=èŠ¹è�œ
 
-item.Broth.name=高汤
-item.BoiledChicken.name=水煮鸡肉
-item.BoiledBeef.name=水煮牛肉
-item.BoiledFish.name=水煮鱼
-item.BoiledPork.name=水煮猪肉
-item.BoiledVenison.name=水煮鹿肉
-item.Peanut.name=花生
-item.Chestnut.name=板栗
-item.Pecan.name=胡桃
-item.Acorn.name=橡子
-item.PineNut.name=松子
-item.Walnut.name=核桃
-item.Almond.name=杏仁
-item.Cashew.name=腰果
-item.Coconut.name=椰子
-item.Hazelnut.name=榛子
-item.Macadamia Nut.name=澳洲坚果
-item.Pistachio.name=开心果
+item.Broth.name=é«˜æ±¤
+item.BoiledChicken.name=æ°´ç…®é¸¡è‚‰
+item.BoiledBeef.name=æ°´ç…®ç‰›è‚‰
+item.BoiledFish.name=æ°´ç…®é±¼
+item.BoiledPork.name=æ°´ç…®çŒªè‚‰
+item.BoiledVenison.name=æ°´ç…®é¹¿è‚‰
+item.Peanut.name=èŠ±ç”Ÿ
+item.Chestnut.name=æ�¿æ —
+item.Pecan.name=èƒ¡æ¡ƒ
+item.Acorn.name=æ©¡å­�
+item.PineNut.name=æ�¾å­�
+item.Walnut.name=æ ¸æ¡ƒ
+item.Almond.name=æ��ä»�
+item.Cashew.name=è…°æžœ
+item.Coconut.name=æ¤°å­�
+item.Hazelnut.name=æ¦›å­�
+item.Macadamia Nut.name=æ¾³æ´²å�šæžœ
+item.Pistachio.name=å¼€å¿ƒæžœ
 
-item.VeggySalad.name=蔬菜沙拉
-item.PotatoSalad.name=土豆沙拉
-item.FruitSalad.name=水果沙拉
+item.VeggySalad.name=è”¬è�œæ²™æ‹‰
+item.PotatoSalad.name=åœŸè±†æ²™æ‹‰
+item.FruitSalad.name=æ°´æžœæ²™æ‹‰
 
-item.VegetableSoup.name=蔬菜汤
-item.TomatoSoup.name=土豆汤
-item.ChickenSoup.name=鸡汤
-item.BeefStew.name=炖牛肉
-item.VenisonStew.name=炖鹿肉
-item.FishChowder.name=鱼杂烩
+item.VegetableSoup.name=è”¬è�œæ±¤
+item.TomatoSoup.name=åœŸè±†æ±¤
+item.ChickenSoup.name=é¸¡æ±¤
+item.BeefStew.name=ç‚–ç‰›è‚‰
+item.VenisonStew.name=ç‚–é¹¿è‚‰
+item.FishChowder.name=é±¼æ�‚çƒ©
 
-item.HamSandwich.name=火腿三明治
-item.ChickenSandwich.name=鸡肉三明治
-item.RoastBeefSandwich.name=烤牛肉三明治
-item.SalmonSandwich.name=海鲜三明治
-item.FriedEggSandwich.name=煎蛋三明治
-item.MuttonSandwich.name=羊肉三明治
-item.VenisonSteakSandwich.name=牛排三明治
-item.VegetarianSandwich.name=素三明治
-item.ToastSandwich.name=面包三明治
+item.HamSandwich.name=ç�«è…¿ä¸‰æ˜Žæ²»
+item.ChickenSandwich.name=é¸¡è‚‰ä¸‰æ˜Žæ²»
+item.RoastBeefSandwich.name=çƒ¤ç‰›è‚‰ä¸‰æ˜Žæ²»
+item.SalmonSandwich.name=æµ·é²œä¸‰æ˜Žæ²»
+item.FriedEggSandwich.name=ç…Žè›‹ä¸‰æ˜Žæ²»
+item.MuttonSandwich.name=ç¾Šè‚‰ä¸‰æ˜Žæ²»
+item.VenisonSteakSandwich.name=ç‰›æŽ’ä¸‰æ˜Žæ²»
+item.VegetarianSandwich.name=ç´ ä¸‰æ˜Žæ²»
+item.ToastSandwich.name=é�¢åŒ…ä¸‰æ˜Žæ²»
 
-item.PumpkinSeeds.name=南瓜种子
-item.MelonSeeds.name=西瓜种子
-item.BrownMushroomSpores.name=棕色蘑菇孢子
-item.RedMushroomSpores.name=红色蘑菇孢子
-item.LettuceSeeds.name=莴苣种子
-item.CelerySeeds.name=芹菜种子
-item.PeanutSeeds.name=花生种子
+item.LettuceSeeds.name=èŽ´è‹£ç§�å­�
+item.CelerySeeds.name=èŠ¹è�œç§�å­�
+item.PeanutSeeds.name=èŠ±ç”Ÿç§�å­�
 
-item.Salt.Rock.name=岩盐
-item.Salt.Sea.name=海盐
+item.Salt.Rock.name=å²©ç›�
+item.Salt.Sea.name=æµ·ç›�
 
-item.clayCookingPot.Clay.name=粘土烹饪锅
-item.clayCookingPot.Ceramic.name=陶瓷烹饪锅
+item.clayCookingPot.Clay.name=ç²˜åœŸçƒ¹é¥ªé”…
+item.clayCookingPot.Ceramic.name=é™¶ç“·çƒ¹é¥ªé”…
 
-item.clayOvenWall.name=烤炉墙壁
-item.JackOLantern.name=南瓜灯
-item.Log.Walnut.name=核桃原木
-item.SinglePlank.Walnut.name=核桃木板
+item.clayOvenWall.name=çƒ¤ç‚‰å¢™å£�
+item.JackOLantern.name=å�—ç“œç�¯
+item.Log.Walnut.name=æ ¸æ¡ƒåŽŸæœ¨
+item.SinglePlank.Walnut.name=æ ¸æ¡ƒæœ¨æ�¿
 
 #=======
 #= GUI =
 #=======
-gui.progress=进度
-gui.showIngreds=Â§8食物: (按住 Â§fShiftÂ§8)
+gui.progress=è¿›åº¦
+gui.showIngreds=Ã‚Â§8é£Ÿç‰©: (æŒ‰ä½� Ã‚Â§fShiftÃ‚Â§8)
 gui.PrepTable.Recipes=Recipe
-gui.PotContents=Â§8内容: (按住 Â§fCtrlÂ§8)
-gui.ShowContents=Â§8内容:
-gui.cookingTime=剩余时间
-gui.Almond=扁桃
-gui.Cashew=腰果树
-gui.Coconut=椰子树
-gui.Hazelnut=榛子树
-gui.Macadamia=澳洲坚果树
-gui.Pistachio=开心过树
-gui.Sandwich=三明治
+gui.PotContents=Ã‚Â§8å†…å®¹: (æŒ‰ä½� Ã‚Â§fCtrlÃ‚Â§8)
+gui.ShowContents=Ã‚Â§8å†…å®¹:
+gui.cookingTime=å‰©ä½™æ—¶é—´
+gui.Almond=æ‰�æ¡ƒ
+gui.Cashew=è…°æžœæ ‘
+gui.Coconut=æ¤°å­�æ ‘
+gui.Hazelnut=æ¦›å­�æ ‘
+gui.Macadamia=æ¾³æ´²å�šæžœæ ‘
+gui.Pistachio=å¼€å¿ƒè¿‡æ ‘
+gui.Sandwich=ä¸‰æ˜Žæ²»
 
 #==============
 #= Entities = 
@@ -143,20 +134,20 @@ gui.Sandwich=三明治
 #==========
 #= Fluids =
 #==========
-fluid.broth=高汤
-fluid.vegetableSoup=蔬菜汤
-fluid.tomatoSoup=番茄汤
-fluid.chickenSoup=鸡汤
-fluid.beefStew=炖牛肉
-fluid.venisonStew=炖鹿肉
-fluid.fishChowder=鱼杂脍
+fluid.broth=é«˜æ±¤
+fluid.vegetableSoup=è”¬è�œæ±¤
+fluid.tomatoSoup=ç•ªèŒ„æ±¤
+fluid.chickenSoup=é¸¡æ±¤
+fluid.beefStew=ç‚–ç‰›è‚‰
+fluid.venisonStew=ç‚–é¹¿è‚‰
+fluid.fishChowder=é±¼æ�‚è„�
 
 #========
 #= Misc =
 #========
 
 #== Creative Tabs ==
-itemGroup.CWTFCMain=烹飪與 TFC
+itemGroup.CWTFCMain=çƒ¹é£ªèˆ‡ TFC
 
 #=========
 #= WAILA =

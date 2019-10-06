@@ -277,15 +277,4 @@ public class PlayerHandler
 			}
 		}
 	}
-	
-	@SubscribeEvent
-	public void onBlockHarvest(HarvestDropsEvent event)
-	{		
-		//Replace pumpkin block drop with pumpkin seeds
-		if(!Settings.disablePumpkins && event.block == TFCBlocks.pumpkin)
-		{
-			event.drops.clear();
-			event.drops.add(new ItemStack(CWTFCItems.seedsPumpkin));
-		}
-	}
 }

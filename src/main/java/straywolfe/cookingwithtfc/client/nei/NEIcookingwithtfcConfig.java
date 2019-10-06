@@ -48,7 +48,6 @@ public class NEIcookingwithtfcConfig implements IConfigureNEI
 		API.hideItem(new ItemStack(CWTFCBlocks.bowlCWTFC));
 		API.hideItem(new ItemStack(CWTFCBlocks.clayOven));
 		API.hideItem(new ItemStack(CWTFCBlocks.customCrop));
-		API.hideItem(new ItemStack(CWTFCBlocks.customGourd));
 		API.hideItem(new ItemStack(CWTFCBlocks.tableStorage));
 		API.hideItem(new ItemStack(CWTFCBlocks.nutTreeLeaves));
 		API.hideItem(new ItemStack(CWTFCBlocks.lumberConstruct));

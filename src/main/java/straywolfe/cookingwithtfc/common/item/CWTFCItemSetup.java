@@ -7,7 +7,6 @@ import com.dunk.tfc.Items.ItemTerra;
 import com.dunk.tfc.api.Enums.EnumFoodGroup;
 
 import straywolfe.cookingwithtfc.api.CWTFCItems;
-import straywolfe.cookingwithtfc.common.item.itemblock.ItemGourdBlock;
 import straywolfe.cookingwithtfc.common.item.itemblock.ItemLog;
 import straywolfe.cookingwithtfc.common.lib.Settings;
 import straywolfe.cookingwithtfc.common.registries.PlantRegistry;
@@ -21,14 +20,9 @@ public class CWTFCItemSetup extends CWTFCItems
 		float snackSize = Settings.SNACK_SIZE;
 		float mealSize = Settings.MEAL_SIZE;
 				
-		//Fruits
-		watermelon = new ItemTFCFoodTransform(EnumFoodGroup.Fruit, 30, 5, 0, 0, 0, snackSize).setDecayRate(2.0f).setUnlocalizedName("SlicedWatermelon");
-				
 		//Vegetables
 		lettuce = new ItemTFCFoodTransform(EnumFoodGroup.Vegetable, 0, 0, 0, 10, 30, snackSize).setUnlocalizedName("Lettuce");
 		celery = new ItemTFCFoodTransform(EnumFoodGroup.Vegetable, 20, 0, 0, 0, 20, snackSize).setUnlocalizedName("Celery");
-		brownMushroom = new ItemTFCFoodTransform(EnumFoodGroup.Vegetable, 0, 0, 0, 0, 50, snackSize).setDecayRate(2.0f).setUnlocalizedName("BrownMushroom");
-		redMushroom = new ItemTFCFoodTransform(EnumFoodGroup.Vegetable, 0, 0, 0, 0, 50, snackSize).setDecayRate(2.0f).setUnlocalizedName("RedMushroom");
 
 		//Protein
 		Broth = new ItemTFCAdjutableFood(EnumFoodGroup.Protein, 0, 0, 0, 0, 30, snackSize, 20, 1F, false, false).setIsJug(true).setUnlocalizedName("Broth");
@@ -78,20 +72,13 @@ public class CWTFCItemSetup extends CWTFCItems
 		ToastSandwich = new ItemTFCSandwichTransform(11, 3, 0, 0, 31, mealSize, 10, SkillRank.Novice, "ToastSandwich");
 		
 		//Seeds
-		seedsPumpkin = new ItemCustomSeeds(PlantRegistry.PUMPKIN).setUnlocalizedName("PumpkinSeeds");
-		seedsMelon = new ItemCustomSeeds(PlantRegistry.WATERMELON).setUnlocalizedName("MelonSeeds");
 		seedsCelery = new ItemCustomSeeds(PlantRegistry.CELERY).setUnlocalizedName("CelerySeeds");
 		seedsLettuce = new ItemCustomSeeds(PlantRegistry.LETTUCE).setUnlocalizedName("LettuceSeeds");
-		sporesBrownMushroom = new ItemCustomSeeds(PlantRegistry.BROWNMUSHROOM).setUnlocalizedName("BrownMushroomSpores");
-		sporesRedMushroom = new ItemCustomSeeds(PlantRegistry.REDMUSHROOM).setUnlocalizedName("RedMushroomSpores");
 		seedsPeanut = new ItemCustomSeeds(PlantRegistry.PEANUT).setUnlocalizedName("PeanutSeeds");
 				
 		//Miscellaneous
 		ClayCookingPot = new ItemClayCookingPot();
 		ClayOvenWall = new ItemClayOvenWall();
-		pumpkinBlock = new ItemGourdBlock(0).setUnlocalizedName("Pumpkin");
-		melonBlock = new ItemGourdBlock(1).setUnlocalizedName("Watermelon");
-		jackolanternBlock = new ItemGourdBlock(2).setUnlocalizedName("JackOLantern");
 		logs = new ItemLog();
 		singlePlank = new ItemLumber();
 	}

@@ -8,6 +8,7 @@ import com.dunk.tfc.Food.CropIndex;
 import com.dunk.tfc.Food.ItemFoodTFC;
 import com.dunk.tfc.api.Food;
 import com.dunk.tfc.api.TFCBlocks;
+import com.dunk.tfc.api.Enums.EnumRegion;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -18,21 +19,21 @@ public class CWTFCCropIndex extends CropIndex
 {	
 	public boolean harvestSeed = true;
 	
-	public CWTFCCropIndex(int id, String name, int type, int growth, int stages, float minGTemp, float minATemp, Item seed)
+	public CWTFCCropIndex(int id, String name, int type, int growth, int stages, float minGTemp, float minATemp, Item seed, EnumRegion[] reg,int minR,int maxR,int minT,int maxT)
 	{
-		super(id, name, type, growth, stages, minGTemp, minATemp, seed);
+		super(id, name, type, growth, stages, minGTemp, minATemp, seed, reg, minR, maxR, minT, maxT);
 		this.cropName = name;
 	}
 	
-	public CWTFCCropIndex(int id, String name, int type, int growth, int stages, float minGTemp, float minATemp, float nutrientUsageMultiplier, Item seed)
+	public CWTFCCropIndex(int id, String name, int type, int growth, int stages, float minGTemp, float minATemp, float nutrientUsageMultiplier, Item seed, EnumRegion[] reg,int minR,int maxR,int minT,int maxT)
 	{
-		super(id, name, type, growth, stages, minGTemp, minATemp, nutrientUsageMultiplier, seed);
+		super(id, name, type, growth, stages, minGTemp, minATemp, nutrientUsageMultiplier, seed, reg, minR, maxR, minT, maxT);
 		this.cropName = name;
 	}
 	
-	public CWTFCCropIndex(int id, String name, int type, int growth, int stages, float minGTemp, float minATemp, float nutrientUsageMultiplier, Item seed, int[] nutriRestore)
+	public CWTFCCropIndex(int id, String name, int type, int growth, int stages, float minGTemp, float minATemp, float nutrientUsageMultiplier, Item seed, EnumRegion[] reg,int minR,int maxR,int minT,int maxT, int[] nutriRestore)
 	{
-		super(id, name, type, growth, stages, minGTemp, minATemp, nutrientUsageMultiplier, seed, nutriRestore);
+		super(id, name, type, growth, stages, minGTemp, minATemp, nutrientUsageMultiplier, seed, reg, minR, maxR, minT, maxT, nutriRestore);
 		this.cropName = name;
 	}
 	

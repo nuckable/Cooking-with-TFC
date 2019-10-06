@@ -1,11 +1,8 @@
 package straywolfe.cookingwithtfc.common.block;
 
-import java.util.Random;
-
-import com.dunk.tfc.TerraFirmaCraft;
 import com.dunk.tfc.Core.TFC_Core;
+import com.dunk.tfc.TerraFirmaCraft;
 import com.dunk.tfc.api.TFCOptions;
-
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -31,11 +28,11 @@ import straywolfe.cookingwithtfc.common.lib.ModInfo;
 import straywolfe.cookingwithtfc.common.registries.PlantRegistry;
 import straywolfe.cookingwithtfc.common.tileentity.TileCrop;
 
+import java.util.Random;
+
 public class BlockCrop extends BlockContainer
 {
 	private IIcon[] iconsGourds = new IIcon[6];
-	private IIcon[] iconsBrownMushroom = new IIcon[4];
-	private IIcon[] iconsRedMushroom = new IIcon[4];
 	private IIcon[] iconCelery = new IIcon[7];
 	private IIcon[] iconLettuce = new IIcon[6];
 	private IIcon[] iconPeanut = new IIcon[6];
@@ -52,13 +49,6 @@ public class BlockCrop extends BlockContainer
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister register)
 	{
-		for(int i = 1; i <= 4; i++)
-		{
-			iconsGourds[i - 1] = register.registerIcon(ModInfo.ModID + ":Crops/Pumpkin_" + i);
-			iconsBrownMushroom[i - 1] = register.registerIcon(ModInfo.ModID + ":Crops/BrownMushroom_" + i);
-			iconsRedMushroom[i - 1] = register.registerIcon(ModInfo.ModID + ":Crops/RedMushroom_" + i);
-		}
-		
 		for(int i = 1; i <= 6; i++)
 		{
 			iconLettuce[i - 1] = register.registerIcon(ModInfo.ModID + ":Crops/Lettuce_" + i);
@@ -70,27 +60,12 @@ public class BlockCrop extends BlockContainer
 			iconCelery[i - 1] = register.registerIcon(ModInfo.ModID + ":Crops/Celery_" + i);
 		}
 		
-		iconsGourds[4] = register.registerIcon(ModInfo.ModID + ":Crops/Watermelon_1");
-		iconsGourds[5] = register.registerIcon(ModInfo.ModID + ":Crops/Watermelon_2");
 	}
 	
 	@SideOnly(Side.CLIENT)
 	public IIcon getCropIcon(String s)
 	{
-		if("Pumpkin_Side".equals(s))
-			return iconsGourds[0];
-		else if("Pumpkin_Top".equals(s))
-			return iconsGourds[1];
-		else if("Plant_Top".equals(s))
-			return iconsGourds[2];
-		else if("Plant_Bottom".equals(s))
-			return iconsGourds[3];
-		else if("Melon_Side".equals(s))
-			return iconsGourds[4];
-		else if("Melon_Top".equals(s))
-			return iconsGourds[5];
-		else
-			return null;
+		return null;
 	}
 	
 	@Override
@@ -109,14 +84,6 @@ public class BlockCrop extends BlockContainer
 			
 			switch(cropID)
 			{
-				case PlantRegistry.WATERMELON: 
-					return iconsGourds[4];
-				case PlantRegistry.PUMPKIN: 
-					return iconsGourds[0];
-				case PlantRegistry.BROWNMUSHROOM:
-					return iconsBrownMushroom[stage];
-				case PlantRegistry.REDMUSHROOM:
-					return iconsRedMushroom[stage];
 				case PlantRegistry.CELERY:
 					return iconCelery[stage];
 				case PlantRegistry.LETTUCE:
@@ -229,35 +196,6 @@ public class BlockCrop extends BlockContainer
 		
 		switch(te.getCropID())
 		{
-			case PlantRegistry.WATERMELON: 
-			case PlantRegistry.PUMPKIN:
-			{
-				if(stage > 4)
-					stage = 4;
-				
-				if(stage < 3)
-					return null;
-				else if(stage == 3)
-				{
-					switch(meta)
-					{
-						case 0: return AxisAlignedBB.getBoundingBox(x + 0.125, y, z + 0.3125, x + 0.4375, y + 0.3125, z + 0.625);
-						case 1: return AxisAlignedBB.getBoundingBox(x + 0.375, y, z + 0.125, x + 0.6875, y + 0.3125, z + 0.4375);
-						case 2: return AxisAlignedBB.getBoundingBox(x + 0.3125, y, z + 0.5625, x + 0.625, y + 0.3125, z + 0.875);
-						default: return AxisAlignedBB.getBoundingBox(x + 0.375, y, z + 0.5625, x + 0.6875, y + 0.3125, z + 0.875);
-					}
-				}
-				else
-				{
-					switch(meta)
-					{
-						case 0: return AxisAlignedBB.getBoundingBox(x, y, z, x + 0.625, y + 0.625, z + 0.625);
-						case 1: return AxisAlignedBB.getBoundingBox(x + 0.375, y, z, x + 1, y + 0.625, z + 0.625);
-						case 2: return AxisAlignedBB.getBoundingBox(x, y, z + 0.375, x + 0.625, y + 0.625, z + 1);
-						default: return AxisAlignedBB.getBoundingBox(x + 0.375, y, z + 0.375, x + 1, y + 0.625, z + 1);
-					}
-				}
-			}
 			default: return null;
 		}
 	}
@@ -265,15 +203,7 @@ public class BlockCrop extends BlockContainer
 	@Override
 	public AxisAlignedBB getSelectedBoundingBoxFromPool(World world, int x, int y, int z)
 	{
-		
-		switch(((TileCrop)world.getTileEntity(x, y, z)).getCropID())
-		{
-			case PlantRegistry.WATERMELON: 
-			case PlantRegistry.PUMPKIN:
-				return AxisAlignedBB.getBoundingBox(x, y, z, x + 1, y + 0.3, z + 1);
-			default:
-				return AxisAlignedBB.getBoundingBox(x, y, z, x + 1, y + 0.2, z + 1);
-		}
+		return AxisAlignedBB.getBoundingBox(x, y, z, x + 1, y + 0.2, z + 1);
 	}
 	
 	@Override
@@ -281,14 +211,7 @@ public class BlockCrop extends BlockContainer
 	{
 		if(world.getTileEntity(x, y, z) instanceof TileCrop)
 		{
-			switch(((TileCrop)world.getTileEntity(x, y, z)).getCropID())
-			{
-				case PlantRegistry.WATERMELON: 
-				case PlantRegistry.PUMPKIN:
-					setBlockBounds(0, 0, 0, 1, 0.3f, 1); break;
-				default:
-					setBlockBounds(0, 0, 0, 1, 0.2f, 1); break;
-			}
+			setBlockBounds(0, 0, 0, 1, 0.2f, 1);
 		}
 	}
 
@@ -322,11 +245,5 @@ public class BlockCrop extends BlockContainer
 	public boolean addHitEffects(World worldObj, MovingObjectPosition target, EffectRenderer effectRenderer)
 	{
 		return true;
-	}
-
-	@Override
-	public ItemStack getPickBlock(MovingObjectPosition target, World world, int x, int y, int z)
-	{
-		return null;
 	}
 }

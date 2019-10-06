@@ -12,14 +12,7 @@ public class CWTFCItems
 {	
 	public static ArrayList<ItemTerra> subfoodList;
 	
-	//Fruits
-	public static Item watermelon;
-	public static Item pumpkinBlock;
-	public static Item melonBlock;
-	
 	//Vegetables
-	public static Item brownMushroom;
-	public static Item redMushroom;
 	public static Item lettuce;
 	public static Item celery;
 	
@@ -77,10 +70,6 @@ public class CWTFCItems
 	//Seeds
 	public static Item seedsCelery;
 	public static Item seedsLettuce;
-	public static Item seedsPumpkin;
-	public static Item seedsMelon;
-	public static Item sporesBrownMushroom;
-	public static Item sporesRedMushroom;
 	public static Item seedsPeanut;
 	
 	//Miscellaneous
