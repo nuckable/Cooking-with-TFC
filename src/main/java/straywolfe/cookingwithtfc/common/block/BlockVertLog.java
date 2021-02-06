@@ -37,6 +37,6 @@ public class BlockVertLog extends BlockLogVert
 	@SideOnly(Side.CLIENT)
 	public IIcon getIcon(int side, int meta)
 	{
-		return CWTFCBlocks.naturalLog.getIcon(side, meta);
+		return CWTFCBlocks.treeLog.getIcon(side, meta);
 	}
 }

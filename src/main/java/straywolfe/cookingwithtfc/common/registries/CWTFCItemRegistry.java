@@ -75,5 +75,7 @@ public class CWTFCItemRegistry extends CWTFCItems
 		//Wood
 		GameRegistry.registerItem(logs, logs.getUnlocalizedName());
 		GameRegistry.registerItem(singlePlank, singlePlank.getUnlocalizedName());
+		
+		GameRegistry.registerItem(fruitTreeSapling, fruitTreeSapling.getUnlocalizedName());
 	}
 }

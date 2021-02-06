@@ -135,7 +135,7 @@ public class TileCookingPot extends TEFireEntity implements IInventory
 				cookingPotFluid = null;
 			
 			if(fuelTimeLeft <= 0)
-				TFC_Core.handleItemTicking(this, worldObj, xCoord, yCoord, zCoord);
+				TFC_Core.handleItemTicking(this, worldObj, xCoord, yCoord, zCoord, false);
 			
 			if(update)
 				worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);

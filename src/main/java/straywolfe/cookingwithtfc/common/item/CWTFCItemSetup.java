@@ -44,6 +44,8 @@ public class CWTFCItemSetup extends CWTFCItems
 		macadamia = new ItemTFCFoodTransform(EnumFoodGroup.Protein, 20, 0, 5, 15, 30, snackSize).setDecayRate(0.5f).setUnlocalizedName("Macadamia Nut");
 		pistachio = new ItemTFCFoodTransform(EnumFoodGroup.Protein, 20, 0, 0, 0, 40, snackSize).setDecayRate(0.5f).setUnlocalizedName("Pistachio");
 		
+		fruitTreeSapling = new ItemCWTFCFruitTreeSapling().setUnlocalizedName("FruitSapling");
+		
 		//None
 		Salt = new ItemTFCSalt(EnumFoodGroup.None, 0, 0, 40, 0, 0, snackSize, 0.001F, false, false).setUnlocalizedName("Salt");
 				

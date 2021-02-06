@@ -130,7 +130,8 @@ public class CWTFCRegistries
 		//Wood
 		OreDictionary.registerOre("logWood", new ItemStack(CWTFCItems.logs, 1, WILD));
 		OreDictionary.registerOre("woodLumber", new ItemStack(CWTFCItems.singlePlank, 1, WILD));
-		OreDictionary.registerOre("treeSapling", new ItemStack(CWTFCBlocks.customSapling, 1, WILD));
+		OreDictionary.registerOre("treeSapling", new ItemStack(CWTFCBlocks.treeSapling, 1, WILD));
+
 		OreDictionary.registerOre("plankWood", new ItemStack(CWTFCBlocks.woodPlank, 1, WILD));
 	}
 	
@@ -139,7 +140,8 @@ public class CWTFCRegistries
 		TFCFuelHandler.registerFuel(CWTFCItems.singlePlank, 400);
 		TFCFuelHandler.registerFuel(CWTFCItems.logs, 800);
 		
-		TFCFuelHandler.registerFuel(Item.getItemFromBlock(CWTFCBlocks.customSapling), 100);
+		TFCFuelHandler.registerFuel(Item.getItemFromBlock(CWTFCBlocks.treeSapling), 100);
+		//TFCFuelHandler.registerFuel(Item.getItemFromBlock(CWTFCBlocks.fruitTreeSapling), 100);
 		TFCFuelHandler.registerFuel(Item.getItemFromBlock(CWTFCBlocks.prepTableN), 300);
 		TFCFuelHandler.registerFuel(Item.getItemFromBlock(CWTFCBlocks.prepTable2N), 300);
 		TFCFuelHandler.registerFuel(Item.getItemFromBlock(CWTFCBlocks.woodPlank), 300);
@@ -196,19 +198,19 @@ public class CWTFCRegistries
 		
 		if(Helper.isReqModVersion("tfcm", "0.10.0"))
 		{					
-			pressmanager.addRecipe(new PressRecipe(TFCItems.cherry, TFCMFluids.REDFRUITJUICE, 8));
-			pressmanager.addRecipe(new PressRecipe(TFCItems.plum, TFCMFluids.REDFRUITJUICE, 8));
-			pressmanager.addRecipe(new PressRecipe(TFCItems.wintergreenBerry, TFCMFluids.REDFRUITJUICE, 8));
-			pressmanager.addRecipe(new PressRecipe(TFCItems.blueberry, TFCMFluids.REDFRUITJUICE, 8));
-			pressmanager.addRecipe(new PressRecipe(TFCItems.raspberry, TFCMFluids.REDFRUITJUICE, 8));
-			pressmanager.addRecipe(new PressRecipe(TFCItems.strawberry, TFCMFluids.REDFRUITJUICE, 8));
-			pressmanager.addRecipe(new PressRecipe(TFCItems.blackberry, TFCMFluids.REDFRUITJUICE, 8));
-			pressmanager.addRecipe(new PressRecipe(TFCItems.bunchberry, TFCMFluids.REDFRUITJUICE, 8));
-			pressmanager.addRecipe(new PressRecipe(TFCItems.cranberry, TFCMFluids.REDFRUITJUICE, 8));
-			pressmanager.addRecipe(new PressRecipe(TFCItems.snowberry, TFCMFluids.REDFRUITJUICE, 8));
-			pressmanager.addRecipe(new PressRecipe(TFCItems.elderberry, TFCMFluids.REDFRUITJUICE, 8));
-			pressmanager.addRecipe(new PressRecipe(TFCItems.gooseberry, TFCMFluids.REDFRUITJUICE, 8));
-			pressmanager.addRecipe(new PressRecipe(TFCItems.cloudberry, TFCMFluids.REDFRUITJUICE, 8));
+			pressmanager.addRecipe(new PressRecipe(TFCItems.cherry, TFCFluids.CHERRYJUICE, 8));
+			pressmanager.addRecipe(new PressRecipe(TFCItems.plum, TFCFluids.PLUMJUICE, 8));
+			pressmanager.addRecipe(new PressRecipe(TFCItems.wintergreenBerry, TFCFluids.BERRYJUICE, 8));
+			pressmanager.addRecipe(new PressRecipe(TFCItems.blueberry, TFCFluids.BERRYJUICE, 8));
+			pressmanager.addRecipe(new PressRecipe(TFCItems.raspberry, TFCFluids.BERRYJUICE, 8));
+			pressmanager.addRecipe(new PressRecipe(TFCItems.strawberry, TFCFluids.BERRYJUICE, 8));
+			pressmanager.addRecipe(new PressRecipe(TFCItems.blackberry, TFCFluids.BERRYJUICE, 8));
+			pressmanager.addRecipe(new PressRecipe(TFCItems.bunchberry, TFCFluids.BERRYJUICE, 8));
+			pressmanager.addRecipe(new PressRecipe(TFCItems.cranberry, TFCFluids.BERRYJUICE, 8));
+			pressmanager.addRecipe(new PressRecipe(TFCItems.snowberry, TFCFluids.BERRYJUICE, 8));
+			pressmanager.addRecipe(new PressRecipe(TFCItems.elderberry, TFCFluids.BERRYJUICE, 8));
+			pressmanager.addRecipe(new PressRecipe(TFCItems.gooseberry, TFCFluids.BERRYJUICE, 8));
+			pressmanager.addRecipe(new PressRecipe(TFCItems.cloudberry, TFCFluids.BERRYJUICE, 8));
 		}
 	}
 	

@@ -34,43 +34,24 @@ public class WorldGenTrees implements IWorldGenerator
 		
 		//Biome check
 		BiomeGenBase biome = world.getBiomeGenForCoords(chunkX, chunkZ);
-		if(biome instanceof TFCBiome && biome != TFCBiome.OCEAN && 
-			biome != TFCBiome.DEEP_OCEAN && biome != TFCBiome.BEACH && biome != TFCBiome.GRAVEL_BEACH)
-		{
-			treeType0 = TFC_Climate.getTreeLayer(world, chunkX, Global.SEALEVEL, chunkZ, 0);
-			treeType1 = TFC_Climate.getTreeLayer(world, chunkX, Global.SEALEVEL, chunkZ, 1);
-			treeType2 = TFC_Climate.getTreeLayer(world, chunkX, Global.SEALEVEL, chunkZ, 2);
-			
-			//Must be in a tree layer
-			if (treeType0 != -1 && treeType1 != -1 && treeType2 != -1)
-			{
-				rainfall = TFC_Climate.getRainfall(world, chunkX, 0, chunkZ);
-				evt = TFC_Climate.getCacheManager(world).getEVTLayerAt(chunkX + 8, chunkZ + 8).floatdata1;
-				
-				generateTrees(random, chunkX, chunkZ, world);
-				
-				generateFruitTrees(random, chunkX, chunkZ, world);
-			}
-		}		
-	}
-	
-	private void generateFruitTrees(Random random, int chunkX, int chunkZ, World world)
-	{
-		int xCoord = chunkX + random.nextInt(16);
-		int zCoord = chunkZ + random.nextInt(16);
-		int yCoord = world.getTopSolidOrLiquidBlock(xCoord, zCoord);
-		int meta = random.nextInt(Constants.NUTTREETYPES.length);
-		temperature = TFC_Climate.getBioTemperatureHeight(world, xCoord, yCoord, zCoord);
-		
-		WorldGenerator worldGen = new WorldGenFruitTrees(false, meta);
 
-		if(meta == 1 || meta == 2)
-		{
-			if(shouldtreeSpawn(random, 0.25f, 2, 500f, 1200f, 25, 45, 175))
-				worldGen.generate(world, random, xCoord, yCoord, zCoord);
+		if (random.nextInt(70) < 15) {
+			if (biome instanceof TFCBiome && biome != TFCBiome.OCEAN &&
+					biome != TFCBiome.DEEP_OCEAN && biome != TFCBiome.BEACH && biome != TFCBiome.GRAVEL_BEACH) {
+				treeType0 = TFC_Climate.getTreeLayer(world, chunkX, Global.SEALEVEL, chunkZ, 0);
+				treeType1 = TFC_Climate.getTreeLayer(world, chunkX, Global.SEALEVEL, chunkZ, 1);
+				treeType2 = TFC_Climate.getTreeLayer(world, chunkX, Global.SEALEVEL, chunkZ, 2);
+
+				//Must be in a tree layer
+				if (treeType0 != -1 && treeType1 != -1 && treeType2 != -1) {
+					rainfall = TFC_Climate.getRainfall(world, chunkX, 0, chunkZ);
+					evt = TFC_Climate.getCacheManager(world).getEVTLayerAt(chunkX + 8, chunkZ + 8).floatdata1;
+
+					generateTrees(random, chunkX, chunkZ, world);
+
+				}
+			}
 		}
-		else if(shouldtreeSpawn(random, 0.25f, 2, 500f, 1200f, 5, 25, 175))
-			worldGen.generate(world, random, xCoord, yCoord, zCoord);
 	}
 	
 	private void generateTrees(Random random, int chunkX, int chunkZ, World world)
@@ -79,7 +60,7 @@ public class WorldGenTrees implements IWorldGenerator
 		int yCoord = Global.SEALEVEL + 1;
 		int zCoord = chunkZ;
 
-		WorldGenerator worldGen = new WorldGenShortTrees(false, 0);
+		WorldGenerator worldGen = new WorldGenBigTrees(false, 0, false);
 		int numTrees = 1;
 		
 		if (random.nextInt(20) == 0)

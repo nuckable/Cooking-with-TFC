@@ -36,7 +36,7 @@ public class TileHopperCWTFC extends TEHopper
 		{
 			--this.cooldown;
 
-			TFC_Core.handleItemTicking(this, this.worldObj, xCoord, yCoord, zCoord);
+			TFC_Core.handleItemTicking(this, this.worldObj, xCoord, yCoord, zCoord, false);
 
 			if(pressCooldown > 0)
 			{

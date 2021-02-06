@@ -3,6 +3,8 @@ package straywolfe.cookingwithtfc.common.registries;
 import com.dunk.tfc.Core.TFC_Time;
 import com.dunk.tfc.Food.FloraIndex;
 import com.dunk.tfc.Food.FloraManager;
+import com.dunk.tfc.api.TFCItems;
+import com.dunk.tfc.api.Constant.Global;
 import com.dunk.tfc.api.Enums.EnumRegion;
 
 import net.minecraft.init.Blocks;
@@ -38,11 +40,36 @@ public class PlantRegistry
 	{
 		FloraManager manager = FloraManager.getInstance();
 		
-		manager.addIndex(new FloraIndex(Constants.NUTTREETYPES[0], TFC_Time.MARCH, TFC_Time.MAY, TFC_Time.AUGUST, TFC_Time.OCTOBER, new ItemStack(CWTFCItems.almond)));
-		manager.addIndex(new FloraIndex(Constants.NUTTREETYPES[1], TFC_Time.DECEMBER, TFC_Time.FEBRUARY, TFC_Time.MARCH, TFC_Time.MAY, new ItemStack(CWTFCItems.cashew)));
-		manager.addIndex(new FloraIndex(Constants.NUTTREETYPES[2], TFC_Time.APRIL, TFC_Time.APRIL, TFC_Time.MAY, TFC_Time.JULY, new ItemStack(CWTFCItems.coconut)));
-		manager.addIndex(new FloraIndex(Constants.NUTTREETYPES[3], TFC_Time.DECEMBER, TFC_Time.FEBRUARY, TFC_Time.AUGUST, TFC_Time.OCTOBER, new ItemStack(CWTFCItems.hazelnut)));
-		manager.addIndex(new FloraIndex(Constants.NUTTREETYPES[4], TFC_Time.AUGUST, TFC_Time.SEPTEMBER, TFC_Time.MARCH, TFC_Time.JULY, new ItemStack(CWTFCItems.macadamia)));
-		manager.addIndex(new FloraIndex(Constants.NUTTREETYPES[5], TFC_Time.APRIL, TFC_Time.MAY, TFC_Time.SEPTEMBER, TFC_Time.OCTOBER, new ItemStack(CWTFCItems.pistachio)));
+		manager.addIndex(new FloraIndex(Constants.FRUITTREETYPES[0], // Almond
+				TFC_Time.MARCH, TFC_Time.APRIL,
+				TFC_Time.MAY, TFC_Time.SEPTEMBER,
+				new ItemStack(CWTFCItems.fruitTreeSapling, 1, 0),
+				new ItemStack(CWTFCItems.almond)));
+		manager.addIndex(new FloraIndex(Constants.FRUITTREETYPES[1], // Cashew
+				TFC_Time.MARCH, TFC_Time.JULY,
+				TFC_Time.AUGUST, TFC_Time.SEPTEMBER,
+				new ItemStack(CWTFCItems.fruitTreeSapling, 1, 1),
+				new ItemStack(CWTFCItems.cashew)));
+		manager.addIndex(new FloraIndex(Constants.FRUITTREETYPES[2], // Coconut
+				TFC_Time.MARCH, TFC_Time.APRIL,
+				TFC_Time.JULY, TFC_Time.SEPTEMBER,
+				new ItemStack(CWTFCItems.fruitTreeSapling, 1, 2),
+				new ItemStack(CWTFCItems.coconut)));
+		manager.addIndex(new FloraIndex(Constants.FRUITTREETYPES[3], // Hazelnut
+				TFC_Time.MARCH, TFC_Time.APRIL,
+				TFC_Time.JULY, TFC_Time.SEPTEMBER,
+				new ItemStack(CWTFCItems.fruitTreeSapling, 1, 3),
+				new ItemStack(CWTFCItems.hazelnut)));
+		manager.addIndex(new FloraIndex(Constants.FRUITTREETYPES[4], // Macadamia
+				TFC_Time.MARCH, TFC_Time.APRIL,
+				TFC_Time.JULY, TFC_Time.SEPTEMBER,
+				new ItemStack(CWTFCItems.fruitTreeSapling, 1, 4),
+				new ItemStack(CWTFCItems.macadamia)));
+		manager.addIndex(new FloraIndex(Constants.FRUITTREETYPES[5], // Pistachio
+				TFC_Time.MARCH, TFC_Time.APRIL,
+				TFC_Time.JULY, TFC_Time.SEPTEMBER,
+				new ItemStack(CWTFCItems.fruitTreeSapling, 1, 5),
+				new ItemStack(CWTFCItems.pistachio)));
+
 	}
 }

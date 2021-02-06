@@ -26,7 +26,7 @@ public class TileTableStorage extends NetworkTileEntity implements IInventory
 	{
 		if(!worldObj.isRemote)
 		{
-			TFC_Core.handleItemTicking(this, worldObj, xCoord, yCoord, zCoord);
+			TFC_Core.handleItemTicking(this, worldObj, xCoord, yCoord, zCoord, false);
 			
 			boolean destroyBlock = true;
 			

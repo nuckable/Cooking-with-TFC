@@ -26,7 +26,7 @@ public class BlockHorzNS extends BlockVertLog
 	{
 		if(meta < Constants.WOODTYPES.length)
 		{
-			BlockNaturalLog log = (BlockNaturalLog)CWTFCBlocks.naturalLog;
+			BlockCWTFCLog log = (BlockCWTFCLog)CWTFCBlocks.treeLog;
 			
 			if(side == 0 || side == 1)
 				return log.sideIcons[meta];

@@ -5,12 +5,17 @@ import java.util.List;
 import java.util.Map;
 
 import com.dunk.tfc.TerraFirmaCraft;
+import com.dunk.tfc.Blocks.Flora.BlockBranch;
+import com.dunk.tfc.Blocks.Flora.BlockBranch2;
+import com.dunk.tfc.Blocks.Flora.BlockLogNatural;
+import com.dunk.tfc.Blocks.Flora.BlockLogNatural2;
 import com.dunk.tfc.Core.TFC_Core;
 import com.dunk.tfc.Core.Player.FoodStatsTFC;
 import com.dunk.tfc.api.Food;
 import com.dunk.tfc.api.FoodRegistry;
 import com.dunk.tfc.api.Interfaces.IFood;
 
+import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
@@ -18,6 +23,10 @@ import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 import straywolfe.cookingwithtfc.api.managers.ChunkDataManager;
+import straywolfe.cookingwithtfc.common.block.BlockCWTFCBranch;
+import straywolfe.cookingwithtfc.common.block.BlockCWTFCFruitLog;
+import straywolfe.cookingwithtfc.common.block.BlockCWTFCFruitTreeBranch;
+import straywolfe.cookingwithtfc.common.block.BlockCWTFCLog;
 import straywolfe.cookingwithtfc.common.core.helper.Helper;
 import straywolfe.cookingwithtfc.common.handlers.MessageFoodRecord;
 import straywolfe.cookingwithtfc.common.item.ItemTFCMealTransform;
@@ -26,6 +35,7 @@ import straywolfe.cookingwithtfc.common.lib.Settings;
 public class CWTFC_Core 
 {	
 	private static Map<Integer, ChunkDataManager> CDMMap = new HashMap<Integer, ChunkDataManager>();
+	public static Block[][][][] branchMap = new Block[3][3][3][4];
 	
 	public static ChunkDataManager getCDM(World world)
 	{
@@ -241,5 +251,49 @@ public class CWTFC_Core
 		TFC_Core.setPlayerFoodStats(player, foodstats);
 
 		return is;
+	}
+	
+	//Given an initial branch, return the branch that would be in that direction
+	public static Block getSourcedBranchForBranch(Block initialBranch, int x, int y, int z)
+	{
+		//If the branch given wasn't even a branch, we just return null.
+		if(!(initialBranch instanceof BlockCWTFCBranch|| initialBranch instanceof BlockCWTFCLog) || x < -1 || x > 1 || y < -1 || y > 1 || z < -1 || z > 1)
+		{
+			return null;
+		}
+		return branchMap[2-(x+1)][2-(y+1)][2-(z+1)][0];
+	}
+	
+	//Given an initial branch, return the branch that would be in that direction
+	public static Block getSourcedTerminalBranchForBranch(Block initialBranch, int x, int y, int z)
+	{
+		//If the branch given wasn't even a branch, we just return null.
+		if(!(initialBranch instanceof BlockCWTFCBranch || initialBranch instanceof BlockCWTFCLog) || x < -1 || x > 1 || y < -1 || y > 1 || z < -1 || z > 1)
+		{
+			return null;
+		}
+		return branchMap[2-(x+1)][2-(y+1)][2-(z+1)][2];
+	}
+	
+	//Given an initial branch, return the branch that would be in that direction
+	public static Block getSourcedFruitBranchForBranch(Block initialBranch, int x, int y, int z)
+	{
+		//If the branch given wasn't even a branch, we just return null.
+		if(!(initialBranch instanceof BlockCWTFCFruitTreeBranch || initialBranch instanceof BlockCWTFCFruitLog) || x < -1 || x > 1 || y < -1 || y > 1 || z < -1 || z > 1)
+		{
+			return null;
+		}
+		return branchMap[2-(x+1)][2-(y+1)][2-(z+1)][1];
+	}
+	
+	//Given an initial branch, return the branch that would be in that direction
+	public static Block getSourcedTerminalFruitBranchForBranch(Block initialBranch, int x, int y, int z)
+	{
+		//If the branch given wasn't even a branch, we just return null.
+		if(!(initialBranch instanceof BlockCWTFCFruitTreeBranch || initialBranch instanceof BlockCWTFCFruitLog) || x < -1 || x > 1 || y < -1 || y > 1 || z < -1 || z > 1)
+		{
+			return null;
+		}
+		return branchMap[2-(x+1)][2-(y+1)][2-(z+1)][3];
 	}
 }

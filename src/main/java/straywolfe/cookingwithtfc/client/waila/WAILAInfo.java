@@ -1,13 +1,12 @@
 package straywolfe.cookingwithtfc.client.waila;
 
-import java.util.List;
-
+import com.dunk.tfc.Core.TFC_Core;
 import com.dunk.tfc.Core.TFC_Time;
 import com.dunk.tfc.Food.FloraIndex;
 import com.dunk.tfc.Food.FloraManager;
 import com.dunk.tfc.Food.ItemFoodTFC;
+import com.dunk.tfc.WAILA.WAILAData;
 import com.dunk.tfc.api.TFCItems;
-
 import mcp.mobius.waila.api.IWailaConfigHandler;
 import mcp.mobius.waila.api.IWailaDataAccessor;
 import mcp.mobius.waila.api.IWailaDataProvider;
@@ -23,10 +22,28 @@ import straywolfe.cookingwithtfc.api.CWTFCBlocks;
 import straywolfe.cookingwithtfc.api.CWTFCItems;
 import straywolfe.cookingwithtfc.api.managers.CWTFCCropIndex;
 import straywolfe.cookingwithtfc.api.managers.CropManager;
-import straywolfe.cookingwithtfc.common.block.*;
+import straywolfe.cookingwithtfc.common.block.BlockBowl;
+import straywolfe.cookingwithtfc.common.block.BlockCWTFCFruitLeaves;
+import straywolfe.cookingwithtfc.common.block.BlockCWTFCFruitTreeBranch;
+import straywolfe.cookingwithtfc.common.block.BlockCWTFCFruitWood;
+import straywolfe.cookingwithtfc.common.block.BlockMeat;
+import straywolfe.cookingwithtfc.common.block.BlockMixBowl;
+import straywolfe.cookingwithtfc.common.block.BlockPrepTable;
+import straywolfe.cookingwithtfc.common.block.BlockPrepTable2;
+import straywolfe.cookingwithtfc.common.block.BlockSandwich;
 import straywolfe.cookingwithtfc.common.core.helper.Helper;
 import straywolfe.cookingwithtfc.common.item.ItemTFCMealTransform;
-import straywolfe.cookingwithtfc.common.tileentity.*;
+import straywolfe.cookingwithtfc.common.tileentity.TECWTFCFruitLeaves;
+import straywolfe.cookingwithtfc.common.tileentity.TECWTFCFruitTreeWood;
+import straywolfe.cookingwithtfc.common.tileentity.TileBowl;
+import straywolfe.cookingwithtfc.common.tileentity.TileCookingPot;
+import straywolfe.cookingwithtfc.common.tileentity.TileCrop;
+import straywolfe.cookingwithtfc.common.tileentity.TileGourd;
+import straywolfe.cookingwithtfc.common.tileentity.TileGrains;
+import straywolfe.cookingwithtfc.common.tileentity.TileMeat;
+import straywolfe.cookingwithtfc.common.tileentity.TileMixBowl;
+
+import java.util.List;
 
 public class WAILAInfo implements IWailaDataProvider
 {
@@ -41,7 +58,6 @@ public class WAILAInfo implements IWailaDataProvider
 		reg.registerNBTProvider(new WAILAInfo(), TileMixBowl.class);
 		
 		reg.registerStackProvider(new WAILAInfo(), BlockPrepTable.class);
-		
 		reg.registerStackProvider(new WAILAInfo(), BlockPrepTable2.class);
 		
 		reg.registerBodyProvider(new WAILAInfo(), TileCookingPot.class);
@@ -62,13 +78,18 @@ public class WAILAInfo implements IWailaDataProvider
 		reg.registerStackProvider(new WAILAInfo(), TileCrop.class);
 		reg.registerHeadProvider(new WAILAInfo(), TileCrop.class);
 		reg.registerBodyProvider(new WAILAInfo(), TileCrop.class);
+
+		reg.registerStackProvider(new WAILAInfo(), TECWTFCFruitLeaves.class);
+		reg.registerHeadProvider(new WAILAInfo(), TECWTFCFruitLeaves.class);
+		reg.registerBodyProvider(new WAILAInfo(), TECWTFCFruitLeaves.class);
+		reg.registerNBTProvider(new WAILAInfo(), TECWTFCFruitLeaves.class);
+
+		reg.registerStackProvider(new WAILAData(), TECWTFCFruitTreeWood.class);
+		reg.registerHeadProvider(new WAILAData(), TECWTFCFruitTreeWood.class);
 		
-		reg.registerStackProvider(new WAILAInfo(), BlockNutLeaves.class);
-		reg.registerHeadProvider(new WAILAInfo(), BlockNutLeaves.class);
-		reg.registerBodyProvider(new WAILAInfo(), BlockNutLeaves.class);
+		reg.registerStackProvider(new WAILAInfo(), BlockCWTFCFruitTreeBranch.class);
+		reg.registerHeadProvider(new WAILAInfo(), BlockCWTFCFruitTreeBranch.class);
 		
-		reg.registerStackProvider(new WAILAInfo(), BlockNutTree.class);
-		reg.registerHeadProvider(new WAILAInfo(), BlockNutTree.class);
 	}
 	
 	@Override
@@ -91,10 +112,10 @@ public class WAILAInfo implements IWailaDataProvider
 			return sandwichStack(accessor, config);
 		else if(block instanceof BlockBowl)
 			return bowlStack(accessor, config);
-		else if(block instanceof BlockNutLeaves)
-			return nutLeavesStack(accessor, config);
-		else if(block instanceof BlockNutTree)
-			return nutTreeStack(accessor, config);
+		else if(block instanceof BlockCWTFCFruitLeaves || tileEntity instanceof TECWTFCFruitLeaves)
+			return fruitLeavesStack(accessor, config);
+		else if(block instanceof BlockCWTFCFruitTreeBranch)
+			return fruitTreeStack(accessor, config);
 		else if(tileEntity instanceof TileCrop)
 			return cropStack(accessor, config);
 			
@@ -115,9 +136,9 @@ public class WAILAInfo implements IWailaDataProvider
 			currenttip = sandwichHead(itemStack, currenttip, accessor, config);
 		else if(block instanceof BlockBowl)
 			currenttip = bowlHead(itemStack, currenttip, accessor, config);
-		else if(block instanceof BlockNutLeaves)
-			currenttip = nutLeavesHead(itemStack, currenttip, accessor, config);
-		else if(block instanceof BlockNutTree)
+		else if(block instanceof BlockCWTFCFruitLeaves || tileEntity instanceof TECWTFCFruitLeaves)
+			currenttip = fruitLeavesHead(itemStack, currenttip, accessor, config);
+		else if(block instanceof BlockCWTFCFruitTreeBranch)
 			currenttip = fruitTreeHead(itemStack, currenttip, accessor, config);
 		else if(tileEntity instanceof TileCrop)
 			currenttip = cropHead(itemStack, currenttip, accessor, config);
@@ -137,8 +158,8 @@ public class WAILAInfo implements IWailaDataProvider
 			currenttip = cookingPotBody(itemStack, currenttip, accessor, config);
 		else if(tileEntity instanceof TileCrop)
 			currenttip = cropBody(itemStack, currenttip, accessor, config);
-		else if(block instanceof BlockNutLeaves)
-			currenttip = nutLeavesBody(itemStack, currenttip, accessor, config);
+		else if(block instanceof BlockCWTFCFruitLeaves || tileEntity instanceof TECWTFCFruitLeaves)
+			currenttip = fruitLeavesBody(itemStack, currenttip, accessor, config);
 		
 		return currenttip;
 	}
@@ -361,83 +382,65 @@ public class WAILAInfo implements IWailaDataProvider
 		
 		return currenttip;
 	}
-	
-	public List<String> nutLeavesHead(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config)
+
+	public List<String> fruitLeavesHead(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor,
+			IWailaConfigHandler config)
 	{
 		NBTTagCompound tag = accessor.getNBTData();
-		Block block = accessor.getBlock();
 		boolean hasFruit = tag.getBoolean("hasFruit");
-		
-		if(block instanceof BlockNutLeaves)
-		{
-			String type = ((BlockNutLeaves)block).getTreeType(block, accessor.getMetadata());
-			
-			if (!hasFruit)
-				currenttip.set(0, EnumChatFormatting.WHITE.toString() + Helper.translate("gui." + type));
-		}
-		
+		String type;
+		type = BlockCWTFCFruitLeaves.getType(accessor.getBlock(), accessor.getMetadata());
+		if (!hasFruit)
+			currenttip.set(0, EnumChatFormatting.WHITE.toString() + TFC_Core.translate("gui." + type));
+
 		return currenttip;
 	}
-	
-	public ItemStack nutLeavesStack(IWailaDataAccessor accessor, IWailaConfigHandler config)
+
+	public ItemStack fruitLeavesStack(IWailaDataAccessor accessor, IWailaConfigHandler config)
 	{
-		Block block = accessor.getBlock();
-		
-		if(block instanceof BlockNutLeaves)
+		TileEntity te = accessor.getTileEntity();
+		if (te instanceof TECWTFCFruitLeaves)
 		{
-			String type = ((BlockNutLeaves)block).getTreeType(block, accessor.getMetadata());
-			FloraIndex index = FloraManager.getInstance().findMatchingIndex(type);
-			
+
+			FloraIndex index = FloraManager.getInstance()
+					.findMatchingIndex(BlockCWTFCFruitLeaves.getType(accessor.getBlock(), ((TECWTFCFruitLeaves)te).fruitType));
+
 			if (index != null)
+			{
 				return ItemFoodTFC.createTag(index.getOutput());
+			}
 		}
-		
 		return null;
 	}
-	
-	public List<String> nutLeavesBody(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config)
+
+	public List<String> fruitLeavesBody(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor,
+			IWailaConfigHandler config)
 	{
-		Block block = accessor.getBlock();
-		
-		if(block instanceof BlockNutLeaves)
-		{
-			String type = ((BlockNutLeaves)block).getTreeType(block, accessor.getMetadata());
-			FloraIndex index = FloraManager.getInstance().findMatchingIndex(type);
-			
-			if (index != null)
-				currenttip.add(0, TFC_Time.SEASONS[index.harvestStart] + " - " + TFC_Time.SEASONS[index.harvestFinish]);
-		}
-		
+		FloraIndex index = FloraManager.getInstance()
+				.findMatchingIndex(BlockCWTFCFruitLeaves.getType(accessor.getBlock(), accessor.getMetadata()));
+		if (index != null)
+			currenttip.add(TFC_Time.SEASONS[index.harvestStart] + " - " + TFC_Time.SEASONS[index.harvestFinish]);
 		return currenttip;
 	}
 	
 	public List<String> fruitTreeHead(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config)
 	{
-		Block block = accessor.getBlock();
-		
-		if(block instanceof BlockNutTree)
-		{
-			String type = ((BlockNutTree)block).getTreeType(block, accessor.getMetadata());
-			
-			currenttip.set(0, EnumChatFormatting.WHITE.toString() + Helper.translate("gui." + type));
-		}
-		
+		String type;
+		NBTTagCompound tag = accessor.getNBTData();
+		type = BlockCWTFCFruitWood.getType( accessor.getMetadata());
+
+		currenttip.set(0, EnumChatFormatting.WHITE.toString() + TFC_Core.translate("gui." + type));
+
 		return currenttip;
 	}
 	
-	public ItemStack nutTreeStack(IWailaDataAccessor accessor, IWailaConfigHandler config)
+	public ItemStack fruitTreeStack(IWailaDataAccessor accessor, IWailaConfigHandler config)
 	{
-		Block block = accessor.getBlock();
-		
-		if(block instanceof BlockNutTree)
-		{
-			String type = ((BlockNutTree)block).getTreeType(block, accessor.getMetadata());
-			FloraIndex index = FloraManager.getInstance().findMatchingIndex(type);
-			
-			if (index != null)
-				return ItemFoodTFC.createTag(index.getOutput());
-		}
-		
-		return null;
+		FloraIndex index = FloraManager.getInstance().findMatchingIndex(BlockCWTFCFruitWood.getType(accessor.getMetadata()));
+
+		if (index != null)
+			return ItemFoodTFC.createTag(index.getOutput());
+		else
+			return null;
 	}
 }

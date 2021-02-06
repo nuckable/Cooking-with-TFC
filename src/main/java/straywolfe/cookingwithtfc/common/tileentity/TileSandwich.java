@@ -221,7 +221,7 @@ public class TileSandwich extends NetworkTileEntity
 	{
 		if(!worldObj.isRemote)
 		{			
-			TFC_Core.handleItemTicking(sandwichContents, worldObj,  xCoord, yCoord, zCoord, 1.1f, false);
+			TFC_Core.handleItemTicking(sandwichContents, worldObj,  xCoord, yCoord, zCoord, 1.1f, false, false);
 			
 			boolean destroyBlock = true;
 			

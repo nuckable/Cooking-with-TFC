@@ -19,21 +19,21 @@ public class CWTFCCropIndex extends CropIndex
 {	
 	public boolean harvestSeed = true;
 	
-	public CWTFCCropIndex(int id, String name, int type, int growth, int stages, float minGTemp, float minATemp, Item seed, EnumRegion[] reg,int minR,int maxR,int minT,int maxT)
+	public CWTFCCropIndex(int id, String name, int type, int growth, int stages, int waterDistance, float minGTemp, float minATemp, Item seed, EnumRegion[] reg,int minR,int maxR,int minT,int maxT)
 	{
-		super(id, name, type, growth, stages, minGTemp, minATemp, seed, reg, minR, maxR, minT, maxT);
+		super(id, name, type, growth, stages, waterDistance, minGTemp, minATemp, seed, reg, minR, maxR, minT, maxT);
 		this.cropName = name;
 	}
 	
-	public CWTFCCropIndex(int id, String name, int type, int growth, int stages, float minGTemp, float minATemp, float nutrientUsageMultiplier, Item seed, EnumRegion[] reg,int minR,int maxR,int minT,int maxT)
+	public CWTFCCropIndex(int id, String name, int type, int growth, int stages, int waterDistance, float minGTemp, float minATemp, float nutrientUsageMultiplier, Item seed, EnumRegion[] reg,int minR,int maxR,int minT,int maxT)
 	{
-		super(id, name, type, growth, stages, minGTemp, minATemp, nutrientUsageMultiplier, seed, reg, minR, maxR, minT, maxT);
+		super(id, name, type, growth, stages, waterDistance, minGTemp, minATemp, nutrientUsageMultiplier, seed, reg, minR, maxR, minT, maxT);
 		this.cropName = name;
 	}
 	
-	public CWTFCCropIndex(int id, String name, int type, int growth, int stages, float minGTemp, float minATemp, float nutrientUsageMultiplier, Item seed, EnumRegion[] reg,int minR,int maxR,int minT,int maxT, int[] nutriRestore)
+	public CWTFCCropIndex(int id, String name, int type, int growth, int stages, int waterDistance, float minGTemp, float minATemp, float nutrientUsageMultiplier, Item seed, EnumRegion[] reg,int minR,int maxR,int minT,int maxT, int[] nutriRestore)
 	{
-		super(id, name, type, growth, stages, minGTemp, minATemp, nutrientUsageMultiplier, seed, reg, minR, maxR, minT, maxT, nutriRestore);
+		super(id, name, type, growth, stages, waterDistance, minGTemp, minATemp, nutrientUsageMultiplier, seed, reg, minR, maxR, minT, maxT, nutriRestore);
 		this.cropName = name;
 	}
 	

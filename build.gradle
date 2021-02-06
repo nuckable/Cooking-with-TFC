@@ -1,8 +1,10 @@
 buildscript {
     repositories {
-        mavenCentral()
         maven {
-            name = "Minecraft Forge"
+            url = "https://repo1.maven.org/maven2/"
+        }
+        maven {
+            name = "forge"
             url = "http://files.minecraftforge.net/maven"
         }
         maven {
@@ -15,32 +17,15 @@ buildscript {
     }
 }
 
-// define the properties file
-ext.configFile = file "build.prop"
+apply plugin: 'forge'
 
-configFile.withReader {
-    // read config.  it shall from now on be referenced as simply config or as project.config
-    def prop = new Properties()
-    prop.load(it)
-    project.ext.config = new ConfigSlurper().parse prop
-}
+version = "0.0.7.2"
+group= "straywolfe.cookingwithtfc"
+archivesBaseName = "CookingWithTFC"
 
-allprojects {
-    apply plugin: 'java'
-    apply plugin: 'forge'
-    apply plugin: 'maven'
-    group = config.group_name
-    version = config.mod_version
-    archivesBaseName = "[${config.minecraft_version}]${config.mod_id}"
-
-    minecraft {
-        version = config.minecraft_version + "-" + config.forge_version
-        if(file('../run').exists()) {
-            runDir = "../run"
-        } else {
-            runDir = ""
-        }
-    }
+minecraft {
+    version = "1.7.10-10.13.4.1614-1.7.10"
+    runDir = "eclipse"
 }
 
 repositories {
@@ -50,7 +35,7 @@ repositories {
         url "http://mobiusstrip.eu/maven"
     }
     maven {
-        // the repo from which to get NEI and stuff 
+        // the repo from which to get NEI and stuff
         name 'CB Repo'
         url "http://chickenbones.net/maven/"
     }
@@ -64,44 +49,51 @@ dependencies {
     compile "mcp.mobius.waila:Waila:1.5.11-RC2-NONEI_1.7.10"
 }
 
-//Creates a compiled de-obfuscated jar
-task deobfJar(type: Jar) {
-    from sourceSets.main.output
-    appendix = 'deobf'
-}
-
-//creates a jar containing only the src
-task sourceJar(type: Jar) {
-    from sourceSets.main.allSource
-    appendix = 'src'
-}
-
-tasks.build.dependsOn('sourceJar', 'deobfJar')
-
-dependencies {
-    compile fileTree(dir:'libs',include:'*.jar')
-}
-
 processResources {
-    // First we just copy in the mcmod.info file
-    from(sourceSets.main.resources.srcDirs) {
-        include '**/*.info'
-        include '**/*.prop'
+    // this will ensure that this task is redone when the versions change.
+    inputs.property "version", project.version
+    inputs.property "mcversion", project.minecraft.version
 
-        // replaces
-        expand ([
-                'mod_version': project.config.mod_version,
-                'tfc_version': project.config.tfc_version,
-                'minecraft_version': project.config.minecraft_version,
-        ])
-    }
-    // copy everything else, that we didn't copy before
+    // replace stuff in mcmod.info, nothing else
     from(sourceSets.main.resources.srcDirs) {
-        exclude '**/*.info'
-        exclude '**/*.prop'
+        include 'mcmod.info'
+                
+        // replace version and mcversion
+        expand 'version':project.version, 'mcversion':project.minecraft.version
+    }
+        
+    // copy everything else, thats not the mcmod.info
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'mcmod.info'
     }
 }
 
-task wrapper(type: Wrapper) {
-    gradleVersion = '2.2.1'
+tasks.build.dependsOn('sourcesJar', 'deobfJar')
+
+task sourcesJar(type: Jar) {
+    from "LICENSE.txt"
+    from sourceSets.main.allSource
+    classifier = 'src'
+    appendix = project.minecraft.version
+}
+
+task deobfJar(type: Jar) {
+    from "LICENSE.txt"
+    from sourceSets.main.output
+    from (sourceSets.main.allSource.srcDirs) {
+        include '**/*.java'
+    }
+    classifier = 'deobf'
+    appendix = project.minecraft.version
+}
+
+jar {
+    from "LICENSE.txt"
+    appendix = project.minecraft.version
+}
+
+artifacts {
+    archives jar
+    archives sourcesJar
+    archives deobfJar
 }

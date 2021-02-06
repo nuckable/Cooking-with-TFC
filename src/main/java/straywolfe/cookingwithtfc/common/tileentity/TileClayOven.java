@@ -2,6 +2,7 @@ package straywolfe.cookingwithtfc.common.tileentity;
 
 import java.util.Random;
 
+import com.dunk.tfc.Core.TFC_Climate;
 import com.dunk.tfc.Core.TFC_Core;
 import com.dunk.tfc.Core.TFC_Time;
 import com.dunk.tfc.TileEntities.NetworkTileEntity;
@@ -94,7 +95,7 @@ public class TileClayOven extends NetworkTileEntity implements IInventory
 				fireTemp = 0;
 			
 			if(fuelTimeLeft <= 0)
-				TFC_Core.handleItemTicking(this, worldObj, xCoord, yCoord, zCoord);
+				TFC_Core.handleItemTicking(this, worldObj, xCoord, yCoord, zCoord, false);
 
 			if(curingTime > 0)
 			{
@@ -188,9 +189,9 @@ public class TileClayOven extends NetworkTileEntity implements IInventory
 					}
 				}
 				else if (fireTemp > temp)
-					temp += TFC_ItemHeat.getTempIncrease(is);
+					temp += TFC_ItemHeat.getTempIncrease(is, TFC_Climate.getHeightAdjustedTemp(worldObj, xCoord, yCoord, zCoord));
 				else
-					temp -= TFC_ItemHeat.getTempDecrease(is);
+					temp -= TFC_ItemHeat.getTempDecrease(is, TFC_Climate.getHeightAdjustedTemp(worldObj, xCoord, yCoord, zCoord));
 				TFC_ItemHeat.setTemp(is, temp);
 			}
 		}

@@ -1,15 +1,6 @@
 package straywolfe.cookingwithtfc.common;
 
-import net.minecraftforge.common.MinecraftForge;
-import straywolfe.cookingwithtfc.api.CWTFCBlocks;
-import straywolfe.cookingwithtfc.api.CWTFCItems;
-import straywolfe.cookingwithtfc.common.handlers.*;
-import straywolfe.cookingwithtfc.common.lib.ModInfo;
-import straywolfe.cookingwithtfc.common.registries.CWTFCRegistries;
-import straywolfe.cookingwithtfc.common.registries.HeatedItemRecipes;
-
 import com.dunk.tfc.TerraFirmaCraft;
-
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -17,6 +8,18 @@ import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.common.MinecraftForge;
+import straywolfe.cookingwithtfc.api.CWTFCBlocks;
+import straywolfe.cookingwithtfc.api.CWTFCItems;
+import straywolfe.cookingwithtfc.common.handlers.ChunkHandler;
+import straywolfe.cookingwithtfc.common.handlers.ConfigHandler;
+import straywolfe.cookingwithtfc.common.handlers.CraftingMatrixHandler;
+import straywolfe.cookingwithtfc.common.handlers.EntitySpawnHandler;
+import straywolfe.cookingwithtfc.common.handlers.MessageFoodRecord;
+import straywolfe.cookingwithtfc.common.handlers.PlayerHandler;
+import straywolfe.cookingwithtfc.common.lib.ModInfo;
+import straywolfe.cookingwithtfc.common.registries.CWTFCRegistries;
+import straywolfe.cookingwithtfc.common.registries.HeatedItemRecipes;
 
 @Mod(modid = ModInfo.ModID, name = ModInfo.ModName, version = ModInfo.ModVersion, dependencies = ModInfo.ModDependencies)
 public class CookingWithTFC

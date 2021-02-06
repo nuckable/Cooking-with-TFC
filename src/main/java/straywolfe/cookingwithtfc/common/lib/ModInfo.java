@@ -5,7 +5,7 @@ public class ModInfo
 	public static final String ModID = "cookingwithtfc";
 	public static final String ModName = "CookingWithTFC";
 
-	public static final String ModVersion = "@MOD_VERSION@";
+	public static final String ModVersion = "0.0.7.2";
 	public static final String ModChannel = "CookingWithTFC";
 	public static final String SERVER_PROXY_CLASS = "straywolfe.cookingwithtfc.common.CommonProxyCWTFC";
 	public static final String CLIENT_PROXY_CLASS = "straywolfe.cookingwithtfc.client.ClientProxyCWTFC";

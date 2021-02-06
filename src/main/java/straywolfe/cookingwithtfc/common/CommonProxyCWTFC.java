@@ -2,7 +2,6 @@ package straywolfe.cookingwithtfc.common;
 
 import com.dunk.tfc.Food.ItemFoodTFC;
 import com.dunk.tfc.api.TFCItems;
-
 import cpw.mods.fml.common.event.FMLInterModComms;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.ItemStack;
@@ -14,7 +13,20 @@ import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import straywolfe.cookingwithtfc.api.CWTFCFluids;
 import straywolfe.cookingwithtfc.api.CWTFCItems;
-import straywolfe.cookingwithtfc.common.tileentity.*;
+import straywolfe.cookingwithtfc.common.tileentity.TECWTFCFruitLeaves;
+import straywolfe.cookingwithtfc.common.tileentity.TECWTFCFruitTreeWood;
+import straywolfe.cookingwithtfc.common.tileentity.TileBowl;
+import straywolfe.cookingwithtfc.common.tileentity.TileClayOven;
+import straywolfe.cookingwithtfc.common.tileentity.TileCookingPot;
+import straywolfe.cookingwithtfc.common.tileentity.TileCrop;
+import straywolfe.cookingwithtfc.common.tileentity.TileGrains;
+import straywolfe.cookingwithtfc.common.tileentity.TileHopperCWTFC;
+import straywolfe.cookingwithtfc.common.tileentity.TileLumberConstruct;
+import straywolfe.cookingwithtfc.common.tileentity.TileMeat;
+import straywolfe.cookingwithtfc.common.tileentity.TileMixBowl;
+import straywolfe.cookingwithtfc.common.tileentity.TileSandwich;
+import straywolfe.cookingwithtfc.common.tileentity.TileTableStorage;
+import straywolfe.cookingwithtfc.common.worldgen.WorldGenCWTFCPlants;
 import straywolfe.cookingwithtfc.common.worldgen.WorldGenCrops;
 import straywolfe.cookingwithtfc.common.worldgen.WorldGenTrees;
 
@@ -31,8 +43,8 @@ public class CommonProxyCWTFC
 		GameRegistry.registerTileEntity(TileSandwich.class, "TileSandwich");
 		GameRegistry.registerTileEntity(TileTableStorage.class, "TileTableStorage");
 		GameRegistry.registerTileEntity(TileCrop.class, "TileCrop");
-		GameRegistry.registerTileEntity(TileNutTree.class, "TileNutTree");
-		GameRegistry.registerTileEntity(TileFruitLeaves.class, "TileFruitLeaves");
+		GameRegistry.registerTileEntity(TECWTFCFruitTreeWood.class, "TileFruitTree");
+		GameRegistry.registerTileEntity(TECWTFCFruitLeaves.class, "TileFruitLeaves");
 		GameRegistry.registerTileEntity(TileLumberConstruct.class, "TileLumberConstruct");
 		
 		if(clientReg)
@@ -75,8 +87,9 @@ public class CommonProxyCWTFC
 	
 	void registerWorldGen()
 	{
-		GameRegistry.registerWorldGenerator(new WorldGenTrees(), 8);
-		GameRegistry.registerWorldGenerator(new WorldGenCrops(), 9);
+		GameRegistry.registerWorldGenerator(new WorldGenTrees(), 9);
+		GameRegistry.registerWorldGenerator(new WorldGenCrops(), 10);
+		GameRegistry.registerWorldGenerator(new WorldGenCWTFCPlants(), 11);
 	}
 	
 	public void registerRenderInformation()

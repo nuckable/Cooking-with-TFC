@@ -118,7 +118,7 @@ public class TileCrop extends NetworkTileEntity
 				int nutri = tef != null ? tef.nutrients[nutriType] : 18000;
 				int fert = tef != null ? tef.nutrients[3] : 0;
 				int soilMax = tef != null ? tef.getSoilMax() : 18000;
-				float waterBoost = BlockFarmland.isFreshWaterNearby(worldObj, xCoord, yCoord - 1, zCoord) ? 0.1f : 0;
+				float waterBoost = BlockFarmland.isFreshWaterNearby(worldObj, xCoord, yCoord - 1, zCoord) < 0 ? 0.1f : 0;
 
 				nutri = Math.min(nutri + fert, (int)(soilMax * 1.25f));
 

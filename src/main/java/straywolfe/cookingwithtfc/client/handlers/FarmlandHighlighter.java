@@ -195,7 +195,7 @@ public class FarmlandHighlighter
 			
 			if(b == TFCBlocks.tilledSoil || b == TFCBlocks.tilledSoil2)
 			{
-				boolean water = BlockFarmland.isFreshWaterNearby(world, event.target.blockX, event.target.blockY-crop, event.target.blockZ);
+				boolean water = BlockFarmland.isFreshWaterNearby(world, event.target.blockX, event.target.blockY-crop, event.target.blockZ) > 0;
 
 				GL11.glEnable(GL11.GL_BLEND);
 				GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);

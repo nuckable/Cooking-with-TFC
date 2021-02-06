@@ -1,12 +1,9 @@
 package straywolfe.cookingwithtfc.client;
 
-import straywolfe.cookingwithtfc.common.CommonProxyCWTFC;
-import straywolfe.cookingwithtfc.common.tileentity.*;
-
 import com.dunk.tfc.Core.ColorizerFoliageTFC;
 import com.dunk.tfc.Core.TFC_Climate;
 import com.dunk.tfc.Core.TFC_Time;
-
+import com.dunk.tfc.Handlers.Client.BlockRenderHandler;
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.relauncher.Side;
@@ -17,7 +14,20 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import straywolfe.cookingwithtfc.api.CWTFCBlocks;
 import straywolfe.cookingwithtfc.client.handlers.FarmlandHighlighter;
-import straywolfe.cookingwithtfc.client.render.*;
+import straywolfe.cookingwithtfc.client.render.RenderBowl;
+import straywolfe.cookingwithtfc.client.render.RenderCWTFCBranch;
+import straywolfe.cookingwithtfc.client.render.RenderClayOven;
+import straywolfe.cookingwithtfc.client.render.RenderCookingPot;
+import straywolfe.cookingwithtfc.client.render.RenderCrop;
+import straywolfe.cookingwithtfc.client.render.RenderLumberConstruct;
+import straywolfe.cookingwithtfc.client.render.RenderMeat;
+import straywolfe.cookingwithtfc.client.render.RenderMixingBowl;
+import straywolfe.cookingwithtfc.client.render.RenderPrepTable;
+import straywolfe.cookingwithtfc.client.render.RenderSandwich;
+import straywolfe.cookingwithtfc.client.render.RenderTableStorage;
+import straywolfe.cookingwithtfc.client.render.TESRClayOven;
+import straywolfe.cookingwithtfc.common.CommonProxyCWTFC;
+import straywolfe.cookingwithtfc.common.tileentity.TileClayOven;
 
 public class ClientProxyCWTFC extends CommonProxyCWTFC
 {
@@ -41,9 +51,12 @@ public class ClientProxyCWTFC extends CommonProxyCWTFC
 		RenderingRegistry.registerBlockHandler(CWTFCBlocks.sandwichRenderID = RenderingRegistry.getNextAvailableRenderId(), new RenderSandwich());
 		RenderingRegistry.registerBlockHandler(CWTFCBlocks.tableStorageRenderID = RenderingRegistry.getNextAvailableRenderId(), new RenderTableStorage());
 		RenderingRegistry.registerBlockHandler(CWTFCBlocks.customCropRenderID = RenderingRegistry.getNextAvailableRenderId(), new RenderCrop());
-		RenderingRegistry.registerBlockHandler(CWTFCBlocks.fruitTreeRenderID = RenderingRegistry.getNextAvailableRenderId(), new RenderFruitTree());
-		RenderingRegistry.registerBlockHandler(CWTFCBlocks.nutLeavesRenderID = RenderingRegistry.getNextAvailableRenderId(), new RenderFruitTree());
 		RenderingRegistry.registerBlockHandler(CWTFCBlocks.lumberConstructRenderID = RenderingRegistry.getNextAvailableRenderId(), new RenderLumberConstruct());
+		RenderingRegistry.registerBlockHandler(CWTFCBlocks.leavesRenderID = RenderingRegistry.getNextAvailableRenderId(), new BlockRenderHandler());
+		RenderingRegistry.registerBlockHandler(CWTFCBlocks.branchRenderID = RenderingRegistry.getNextAvailableRenderId(), new RenderCWTFCBranch());
+		RenderingRegistry.registerBlockHandler(CWTFCBlocks.fruitTreeLeavesRenderID = RenderingRegistry.getNextAvailableRenderId(), new CWTFCBlockRenderHandler());
+		RenderingRegistry.registerBlockHandler(CWTFCBlocks.fruitTreeBranchRenderID = RenderingRegistry.getNextAvailableRenderId(), new RenderCWTFCBranch());
+		RenderingRegistry.registerBlockHandler(CWTFCBlocks.woodFruitRenderId = RenderingRegistry.getNextAvailableRenderId(), new CWTFCBlockRenderHandler());
 	}
 	
 	@Override
@@ -52,7 +65,7 @@ public class ClientProxyCWTFC extends CommonProxyCWTFC
 		int[] rgb = {0, 0, 0};
 		float temperature = TFC_Climate.getHeightAdjustedTempSpecificDay(getCurrentWorld(),TFC_Time.getDayOfYear(),i, j, k);
 		
-		if(par1IBlockAccess.getBlock(i, j, k) == CWTFCBlocks.nutTreeLeaves)
+		if(par1IBlockAccess.getBlock(i, j, k) == CWTFCBlocks.fruitTreeLeaves)
 		{			
 			int meta = par1IBlockAccess.getBlockMetadata(i, j, k);
 			for (int var8 = -1; var8 <= 1; ++var8)

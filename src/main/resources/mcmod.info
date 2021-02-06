@@ -1,21 +1,20 @@
+[
 {
-    "modListVersion": 2,
-    "modList": [{
-        "modid": "cookingwithtfc",
-        "name": "Cooking with TFC",
-        "description": "Extends the diversity of cooking with TerraFirmaCraft ${tfc_version}.",
-        "version": "${mod_version}",
-        "mcversion": "${minecraft_version}",
-        "url": "",
-        "updateUrl": "",
-        "authorList": ["StrayWolfe"],
-        "credits": "",
-        "logoFile": "",
-        "screenshots": [],
-        "parent": "",
-        "requiredMods": ["Forge", "terrafirmacraftplus"],
-        "dependencies": ["terrafirmacraftplus", "tfcm"],
-        "dependants": [],
-        "useDependencyInformation": "true"
-    }]
+    "modid": "cookingwithtfc",
+    "name": "Cooking with TFC",
+    "description": "Extends the diversity of cooking with TerraFirmaCraft+.",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": ["StrayWolfe"],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "parent": "",
+    "requiredMods": ["Forge", "terrafirmacraftplus"],
+    "dependencies": ["terrafirmacraftplus", "tfcm"],
+    "dependants": [],
+    "useDependencyInformation": "true"
 }
+]

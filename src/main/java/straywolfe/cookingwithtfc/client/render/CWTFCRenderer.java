@@ -1,16 +1,26 @@
 package straywolfe.cookingwithtfc.client.render;
 
 import com.dunk.tfc.Core.TFC_Core;
-
+import com.dunk.tfc.Core.TFC_Time;
+import com.dunk.tfc.Food.FloraIndex;
+import com.dunk.tfc.Food.FloraManager;
+import com.dunk.tfc.Render.TFC_CoreRender;
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.EntityRenderer;
 import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.util.IIcon;
+import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.client.model.obj.Vertex;
+import straywolfe.cookingwithtfc.api.CWTFCBlocks;
+import straywolfe.cookingwithtfc.common.block.BlockCWTFCFruitLeaves;
+import straywolfe.cookingwithtfc.common.tileentity.TECWTFCFruitLeaves;
+import straywolfe.cookingwithtfc.common.tileentity.TECWTFCFruitTreeWood;
 
-public class CWTFCRenderer 
+public class CWTFCRenderer extends TFC_CoreRender
 {	
 	public int x;
 	public int y;
@@ -27,6 +37,107 @@ public class CWTFCRenderer
 		this.z = z;
 		this.block = block;
 		this.renderer = renderer;
+	}
+
+	public static boolean renderWoodTrunk(Block block, int i, int j, int k, RenderBlocks renderblocks)
+	{
+		IBlockAccess blockAccess = renderblocks.blockAccess;
+
+		/*
+		 * if(blockAccess.getBlockMaterial(i, j+1, k) == Material.leaves ||
+		 * blockAccess.getBlockMaterial(i, j-1, k) == Material.leaves ||
+		 * blockAccess.getBlock(i, j+1, k) == mod_TFC_Core.fruitTreeWood ||
+		 * blockAccess.getBlock(i, j-1, k) == mod_TFC_Core.fruitTreeWood)
+		 */
+		if (blockAccess.getTileEntity(i, j,
+				k) != null && (blockAccess.getBlock(i, j - 1, k) == CWTFCBlocks.fruitTreeWood || blockAccess
+						.getBlock(i, j - 1, k).isOpaqueCube()))
+		{
+			renderblocks.setRenderBounds(0.3F, 0.0F, 0.3F, 0.7F, 1.0F, 0.7F);
+			renderblocks.renderStandardBlock(block, i, j, k);
+		}
+		if (blockAccess.getBlock(i - 1, j, k).getMaterial() == Material.leaves || blockAccess.getBlock(i - 1, j,
+				k) == CWTFCBlocks.fruitTreeWood)
+		{
+			renderblocks.setRenderBounds(0.0F, 0.4F, 0.4F, 0.5F, 0.6F, 0.6F);
+			renderblocks.renderStandardBlock(block, i, j, k);
+		}
+		if (blockAccess.getBlock(i + 1, j, k).getMaterial() == Material.leaves || blockAccess.getBlock(i + 1, j,
+				k) == CWTFCBlocks.fruitTreeWood)
+		{
+			renderblocks.setRenderBounds(0.5F, 0.4F, 0.4F, 1.0F, 0.6F, 0.6F);
+			renderblocks.renderStandardBlock(block, i, j, k);
+		}
+		if (blockAccess.getBlock(i, j, k - 1).getMaterial() == Material.leaves || blockAccess.getBlock(i, j,
+				k - 1) == CWTFCBlocks.fruitTreeWood)
+		{
+			renderblocks.setRenderBounds(0.4F, 0.4F, 0.0F, 0.6F, 0.6F, 0.5F);
+			renderblocks.renderStandardBlock(block, i, j, k);
+		}
+		if (blockAccess.getBlock(i, j, k + 1).getMaterial() == Material.leaves || blockAccess.getBlock(i, j,
+				k + 1) == CWTFCBlocks.fruitTreeWood)
+		{
+			renderblocks.setRenderBounds(0.4F, 0.4F, 0.5F, 0.6F, 0.6F, 1.0F);
+			renderblocks.renderStandardBlock(block, i, j, k);
+		}
+
+		if (!((TECWTFCFruitTreeWood) blockAccess.getTileEntity(i, j, k)).isTrunk && blockAccess.getBlock(i, j - 1,
+				k) != CWTFCBlocks.fruitTreeWood && !blockAccess.getBlock(i, j - 1, k).isOpaqueCube())
+		{
+			renderblocks.setRenderBounds(0.0F, 0.4F, 0.4F, 0.5F, 0.6F, 0.6F);
+			renderblocks.renderStandardBlock(block, i, j, k);
+
+			renderblocks.setRenderBounds(0.5F, 0.4F, 0.4F, 1.0F, 0.6F, 0.6F);
+			renderblocks.renderStandardBlock(block, i, j, k);
+
+			renderblocks.setRenderBounds(0.4F, 0.4F, 0.0F, 0.6F, 0.6F, 0.5F);
+			renderblocks.renderStandardBlock(block, i, j, k);
+
+			renderblocks.setRenderBounds(0.4F, 0.4F, 0.5F, 0.6F, 0.6F, 1.0F);
+			renderblocks.renderStandardBlock(block, i, j, k);
+		}
+
+		// renderblocks.func_83020_a(0.0F, 0.0F, 0.0F, 1F, 1F, 1F);
+		return true;
+	}
+
+	public static boolean renderFruitLeaves(Block block, int xCoord, int yCoord, int zCoord,
+			RenderBlocks renderblocks)
+	{
+		int meta = ((TECWTFCFruitLeaves) renderblocks.blockAccess.getTileEntity(xCoord, yCoord, zCoord)).fruitType;
+
+		FloraManager manager = FloraManager.getInstance();
+		FloraIndex index = manager.findMatchingIndex(BlockCWTFCFruitLeaves.getType(block, meta));
+
+		renderblocks.renderStandardBlock(block, xCoord, yCoord, zCoord);
+		if (index != null && (index.inBloom(TFC_Time.getSeasonAdjustedMonth(zCoord)) || index
+				.inHarvest(TFC_Time.getSeasonAdjustedMonth(zCoord))))
+		{
+			renderblocks.overrideBlockTexture = getFruitTreeOverlay(renderblocks.blockAccess, xCoord, yCoord,
+					zCoord);
+			if (renderblocks.overrideBlockTexture != null)
+				renderBlockWithCustomColorMultiplier(block, renderblocks, xCoord, yCoord, zCoord, 16777215);
+			renderblocks.clearOverrideBlockTexture();
+		}
+		return true;
+	}
+
+	public static IIcon getFruitTreeOverlay(IBlockAccess world, int x, int y, int z)
+	{
+		IIcon out = null;
+		int meta = ((TECWTFCFruitLeaves) world.getTileEntity(x, y, z)).fruitType;
+		Block id = world.getBlock(x, y, z);
+		TECWTFCFruitLeaves te = (TECWTFCFruitLeaves) world.getTileEntity(x, y, z);
+		FloraManager manager = FloraManager.getInstance();
+		FloraIndex index = manager.findMatchingIndex(BlockCWTFCFruitLeaves.getType(id, meta));
+		if (index != null)
+		{
+			if (index.inBloom(TFC_Time.getSeasonAdjustedMonth(z)))// blooming
+				out = Minecraft.getMinecraft().gameSettings.fancyGraphics?BlockCWTFCFruitLeaves.iconsFancyFlowers[meta] : BlockCWTFCFruitLeaves.iconsFlowers[meta]; // NOPMD
+			else if(te.hasFruit)
+				out = BlockCWTFCFruitLeaves.iconsFruit[meta]; // NOPMD
+		}
+		return out;
 	}
 	
 	private void renderFaceYNeg(Vertex bottomRight, Vertex bottomLeft, Vertex topRight, Vertex topLeft, 

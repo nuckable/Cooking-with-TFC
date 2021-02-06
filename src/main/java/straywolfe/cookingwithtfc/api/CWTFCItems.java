@@ -79,6 +79,8 @@ public class CWTFCItems
 	public static Item logs;
 	public static Item singlePlank;
 	
+	public static Item fruitTreeSapling;
+	
 	public static void setup()
 	{		
 		//Setup Items

@@ -49,7 +49,7 @@ public class NEIcookingwithtfcConfig implements IConfigureNEI
 		API.hideItem(new ItemStack(CWTFCBlocks.clayOven));
 		API.hideItem(new ItemStack(CWTFCBlocks.customCrop));
 		API.hideItem(new ItemStack(CWTFCBlocks.tableStorage));
-		API.hideItem(new ItemStack(CWTFCBlocks.nutTreeLeaves));
+		API.hideItem(new ItemStack(CWTFCBlocks.fruitTreeLeaves));
 		API.hideItem(new ItemStack(CWTFCBlocks.lumberConstruct));
 		
 		API.hideItem(new ItemStack(CWTFCBlocks.prepTable2E, 1, OreDictionary.WILDCARD_VALUE));
@@ -59,11 +59,11 @@ public class NEIcookingwithtfcConfig implements IConfigureNEI
 		API.hideItem(new ItemStack(CWTFCBlocks.prepTableS, 1, OreDictionary.WILDCARD_VALUE));
 		API.hideItem(new ItemStack(CWTFCBlocks.prepTableW, 1, OreDictionary.WILDCARD_VALUE));
 		
-		API.hideItem(new ItemStack(CWTFCBlocks.naturalLog, 1, OreDictionary.WILDCARD_VALUE));
+		API.hideItem(new ItemStack(CWTFCBlocks.treeLog, 1, OreDictionary.WILDCARD_VALUE));
 		API.hideItem(new ItemStack(CWTFCBlocks.woodVert, 1, OreDictionary.WILDCARD_VALUE));
 		API.hideItem(new ItemStack(CWTFCBlocks.woodHorizEW, 1, OreDictionary.WILDCARD_VALUE));
 		API.hideItem(new ItemStack(CWTFCBlocks.woodHorizNS, 1, OreDictionary.WILDCARD_VALUE));
-		API.hideItem(new ItemStack(CWTFCBlocks.customLeaves, 1, OreDictionary.WILDCARD_VALUE));
+		API.hideItem(new ItemStack(CWTFCBlocks.treeLeaves, 1, OreDictionary.WILDCARD_VALUE));
 
 		API.hideItem(ItemSalad.createTag(new ItemStack(TFCItems.salad, 1, OreDictionary.WILDCARD_VALUE)));
 		API.hideItem(ItemSandwich.createTag(new ItemStack(TFCItems.sandwich, 1, OreDictionary.WILDCARD_VALUE)));

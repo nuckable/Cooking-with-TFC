@@ -169,7 +169,7 @@ public class TileBowl extends NetworkTileEntity
 	{
 		if(!worldObj.isRemote)
 		{			
-			TFC_Core.handleItemTicking(saladContents, worldObj,  xCoord, yCoord, zCoord, 1.1f, false);
+			TFC_Core.handleItemTicking(saladContents, worldObj,  xCoord, yCoord, zCoord, 1.1f, false, false);
 		}
 	}
 	

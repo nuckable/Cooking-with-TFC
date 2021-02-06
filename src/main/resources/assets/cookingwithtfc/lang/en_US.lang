@@ -2,7 +2,7 @@
 #This is the Main language configuration file
 #
 #If you want to color code the text then I recommend you visit http://www.minecraftwiki.net/wiki/Formatting_codes#Color_codes
-#To create the ง symbol which is used for assigning a color to the following text press Alt + 21 on Windows. For other OSes, view the above link.
+#To create the ยง symbol which is used for assigning a color to the following text press Alt + 21 on Windows. For other OSes, view the above link.
 #This file needs to be UTF-8 encoded to work with MC 1.7+
 
 #==========
@@ -30,24 +30,50 @@ tile.PrepTableBlock.White Elm.name=White Elm Food Table
 tile.PrepTableBlock.Willow.name=Willow Food Table
 tile.PrepTableBlock.Kapok.name=Kapok Food Table
 tile.PrepTableBlock.Acacia.name=Acacia Food Table
+tile.PrepTableBlock.Palm.name=Palm Food Table
+tile.PrepTableBlock.Ebony.name=Ebony Food Table
+tile.PrepTableBlock.Fever.name=Fevertree Food Table
+tile.PrepTableBlock.Baobab.name=Baobab Food Table
+tile.PrepTableBlock.Limba.name=Limba Food Table
+tile.PrepTableBlock.Mahogany.name=Mahogany Food Table
+tile.PrepTableBlock.Teak.name=Teak Food Table
+tile.PrepTableBlock.Bamboo.name=Bamboo Food Table
+tile.PrepTableBlock.Gingko.name=Gingko Food Table
+tile.PrepTableBlock.Kapok.name=Fruitwood Food Table
 
 tile.MeatsBlock.name=Meat
 tile.ClayOven.name=Clay Oven
 tile.TableStorage.name=Food Table Items
 tile.Sapling.Walnut.name=Walnut Sapling
-tile.Leaves.Walnut.name=Walnut Leaves
+tile.leaves.Walnut.name=Walnut Leaves
 tile.Log.Walnut.name=Walnut Log
 tile.WoodVert.Walnut.name=Walnut Log
+tile.Branch.Walnut.name=Walnut Log
 
-tile.NutTreeLog.Almond.name=Almond Sapling
-tile.NutTreeLog.Cashew.name=Cashew Sapling
-tile.NutTreeLog.Coconut.name=Coconut Sapling
-tile.NutTreeLog.Hazelnut.name=Hazelnut Sapling
-tile.NutTreeLog.Macadamia.name=Macadamia Nut Sapling
-tile.NutTreeLog.Pistachio.name=Pistachio Sapling
+tile.Branch.Almond.name=Almond Log
+tile.Branch.Cashew.name=Cashew Log
+tile.Branch.Coconut.name=Coconut Log
+tile.Branch.Hazelnut.name=Hazelnut Log
+tile.Branch.Macadamia.name=Macadamia Log
+tile.Branch.Pistachio.name=Pistachio Log
+
+tile.FruitTreeWood.Almond.name=Almond Wood
+tile.FruitTreeWood.Cashew.name=Cashew Wood
+tile.FruitTreeWood.Coconut.name=Coconut Wood
+tile.FruitTreeWood.Hazelnut.name=Hazelnut Wood
+tile.FruitTreeWood.Macadamia.name=Macadamia Wood
+tile.FruitTreeWood.Pistachio.name=Pistachio Wood
+
+item.FruitSapling.Almond.name=Almond Sapling
+item.FruitSapling.Cashew.name=Cashew Sapling
+item.FruitSapling.Coconut.name=Coconut Sapling
+item.FruitSapling.Hazelnut.name=Hazelnut Sapling
+item.FruitSapling.Macadamia.name=Macadamia Nut Sapling
+item.FruitSapling.Pistachio.name=Pistachio Sapling
 
 tile.woodPlank.Walnut.name=Walnut Planks
 tile.LumberConstruct.name=Lumber
+
 
 
 #=========
