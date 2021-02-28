@@ -31,7 +31,7 @@ public class WorldGenFruitTrees extends WorldGenTreeBase
 	{
 		super(bb, id, sap);
 		this.fruitId = fId;
-		this.block2 = false;
+		this.block2 = 0;
 		this.treeId = fId;
 		this.leafBlock = CWTFCBlocks.fruitTreeLeaves;
 	}

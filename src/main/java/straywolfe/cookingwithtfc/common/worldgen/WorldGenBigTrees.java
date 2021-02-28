@@ -54,7 +54,7 @@ public class WorldGenBigTrees extends WorldGenTreeBase
 			{
 				validDirections[0] = true;
 				numValidDirections++;
-				validDirections[0 + 8] = true;
+				validDirections[8] = true;
 				numValidDirections++;
 			}
 			validDirections[1] = true;

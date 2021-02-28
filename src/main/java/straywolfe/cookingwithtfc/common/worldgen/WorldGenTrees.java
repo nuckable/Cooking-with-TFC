@@ -31,13 +31,15 @@ public class WorldGenTrees implements IWorldGenerator
 	{
 		chunkX *= 16;
 		chunkZ *= 16;
-		
-		//Biome check
-		BiomeGenBase biome = world.getBiomeGenForCoords(chunkX, chunkZ);
 
-		if (random.nextInt(70) < 15) {
-			if (biome instanceof TFCBiome && biome != TFCBiome.OCEAN &&
-					biome != TFCBiome.DEEP_OCEAN && biome != TFCBiome.BEACH && biome != TFCBiome.GRAVEL_BEACH) {
+		if (random.nextInt(120) < 15) {
+			if (world.getBiomeGenForCoords(chunkX, chunkZ) instanceof TFCBiome) // Fixes
+			// ClassCastException
+			{
+				TFCBiome biome = (TFCBiome) world.getBiomeGenForCoords(chunkX, chunkZ);
+				if (biome == TFCBiome.OCEAN || biome == TFCBiome.DEEP_OCEAN)
+					return;
+
 				treeType0 = TFC_Climate.getTreeLayer(world, chunkX, Global.SEALEVEL, chunkZ, 0);
 				treeType1 = TFC_Climate.getTreeLayer(world, chunkX, Global.SEALEVEL, chunkZ, 1);
 				treeType2 = TFC_Climate.getTreeLayer(world, chunkX, Global.SEALEVEL, chunkZ, 2);

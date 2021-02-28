@@ -47,7 +47,7 @@ public class WorldGenCWTFCPlants implements IWorldGenerator
 		}
 
 		WorldGenerator gen0 = null;
-		if (random.nextInt(70) < 15)
+		if (random.nextInt(120) < 15)
 		{
 			try
 			{
